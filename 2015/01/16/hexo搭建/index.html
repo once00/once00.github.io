@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://once00.github.io">
   <title>hexo搭建 | Once的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##一.安装Hexo 打开终端 1$ npm install -g hexo ##二.部署Hexo 在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件). 1$ hexo init 必须执行此命令才可被保存 1$ hexo generate">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+  <meta name="description" content="一.安装Hexo打开终端 1$ npm install -g hexo 二.部署Hexo在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件). 1$ hexo init 必须执行此命令才可被保存 1$ hexo generate">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo搭建">
 <meta property="og:url" content="http://once00.github.io/2015/01/16/hexo搭建/index.html">
 <meta property="og:site_name" content="Once的博客">
-<meta property="og:description" content="##一.安装Hexo 打开终端 1$ npm install -g hexo ##二.部署Hexo 在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件). 1$ hexo init 必须执行此命令才可被保存 1$ hexo generate">
-<meta property="og:updated_time" content="2017-05-24T03:50:32.000Z">
+<meta property="og:description" content="一.安装Hexo打开终端 1$ npm install -g hexo 二.部署Hexo在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件). 1$ hexo init 必须执行此命令才可被保存 1$ hexo generate">
+<meta property="og:updated_time" content="2017-05-24T05:30:50.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建">
-<meta name="twitter:description" content="##一.安装Hexo 打开终端 1$ npm install -g hexo ##二.部署Hexo 在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件). 1$ hexo init 必须执行此命令才可被保存 1$ hexo generate">
+<meta name="twitter:description" content="一.安装Hexo打开终端 1$ npm install -g hexo 二.部署Hexo在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件). 1$ hexo init 必须执行此命令才可被保存 1$ hexo generate">
   
     <link rel="alternative" href="/atom.xml" title="Once的博客" type="application/atom+xml">
   
@@ -174,11 +174,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##一.安装Hexo</p>
-<p>打开终端</p>
+        <h2 id="一-安装Hexo"><a href="#一-安装Hexo" class="headerlink" title="一.安装Hexo"></a>一.安装Hexo</h2><p>打开终端</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo</span></div></pre></td></tr></table></figure>
-<p>##二.部署Hexo</p>
-<p>在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件).</p>
+<h2 id="二-部署Hexo"><a href="#二-部署Hexo" class="headerlink" title="二.部署Hexo"></a>二.部署Hexo</h2><p>在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件).</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo init</span></div></pre></td></tr></table></figure>
 <p>必须执行此命令才可被保存</p>
 <figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo <span class="keyword">generate</span></div></pre></td></tr></table></figure>
@@ -188,25 +186,22 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo server</span></div></pre></td></tr></table></figure>
 <p>可把<strong>hexo server</strong>简写为<strong>hexo s</strong></p>
 <p>这时端口4000被打开了，我们能过浏览器打开地址，<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>.</p>
-<p>##克隆主题</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/cnfeat/cnfeat.git themes/jacman</div></pre></td></tr></table></figure>
-<p>###启用主题<br>修改Hexo目录下的config.yml配置文件中的theme属性，将其设置为jacman</p>
+<h2 id="克隆主题"><a href="#克隆主题" class="headerlink" title="克隆主题"></a>克隆主题</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">clone</span> <span class="title">https</span>://github.com/cnfeat/cnfeat.git themes/jacman</div></pre></td></tr></table></figure>
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>修改Hexo目录下的config.yml配置文件中的theme属性，将其设置为jacman</p>
 <p>注:最后一组改的属性</p>
 <p><strong>deploy:</strong></p>
 <p><strong>type: github</strong></p>
 <p><strong>repository: git@github.com:once00/once00.github.io.git</strong></p>
 <p><strong>branch: master</strong></p>
-<p>##推送</p>
-<p>执行此命令进行保存推送到自己的github库</p>
+<h2 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h2><p>执行此命令进行保存推送到自己的github库</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo g</span></div></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo d</span></div></pre></td></tr></table></figure>
-<p>##Hexo命令</p>
-<p>###常用命令：</p>
-<figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="meta">#新建文章</span></div><div class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="meta">#新建页面</span></div><div class="line">hexo generate <span class="meta">#生成静态页面至public目录</span></div><div class="line">hexo <span class="keyword">server</span> <span class="meta">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy <span class="meta">#将.deploy目录部署到GitHub</span></div></pre></td></tr></table></figure>
-<p>###常用复合命令：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> d -g <span class="comment">#生成加部署</span></div><div class="line">hexo s -g <span class="comment">#预览加部署</span></div></pre></td></tr></table></figure>
-<p>###简写：</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo <span class="keyword">new</span></div><div class="line">hexo g == hexo <span class="keyword">generate</span></div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
+<h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><h3 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h3><figure class="highlight axapta"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="meta">#新建文章</span></div><div class="line">hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="meta">#新建页面</span></div><div class="line">hexo generate <span class="meta">#生成静态页面至public目录</span></div><div class="line">hexo <span class="keyword">server</span> <span class="meta">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span></div><div class="line">hexo deploy <span class="meta">#将.deploy目录部署到GitHub</span></div></pre></td></tr></table></figure>
+<h3 id="常用复合命令："><a href="#常用复合命令：" class="headerlink" title="常用复合命令："></a>常用复合命令：</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> d -g <span class="comment">#生成加部署</span></div><div class="line">hexo s -g <span class="comment">#预览加部署</span></div></pre></td></tr></table></figure>
+<h3 id="简写："><a href="#简写：" class="headerlink" title="简写："></a>简写：</h3><figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo n == hexo <span class="keyword">new</span></div><div class="line">hexo g == hexo <span class="keyword">generate</span></div><div class="line">hexo s == hexo server</div><div class="line">hexo d == hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h3><ol>
+<li><strong>ERROR Deployer not found: git</strong>运行<br><code>npm install hexo-deployer-git --save</code><br>在<br><code>hexo d</code></li>
+</ol>
 <p><strong>官方hexo</strong><br><a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a></p>
 
       
@@ -237,6 +232,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -410,6 +416,22 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">sqlite</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
