@@ -144,6 +144,133 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/">Xcode6 使用MJRefresh，Too many arguments to function call, expected 0, have *</a>
+    </h1>
+  
+
+        
+        <a href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/" class="archive-article-date">
+  	<time datetime="2015-01-20T08:50:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>将Xcode升级到6后，报Too many arguments to function call, expected 0, have *，在Xcode5.1里能编译通过的，到Xcode6就报错</p>
+<pre><code>objc_msgSend(self.beginRefreshingTaget, self.beginRefreshingAction, self);
+Too many arguments to function call, expected 0, have *
+</code></pre><p>选中项目 <strong>- Project - Build Settings - ENABLE_STRICT_OBJC_MSGSEND</strong> 将其设置为 <strong>NO</strong> 即可<br>
+        
+          <a class="article-more-a" href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">objective-c</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-初学SQLite" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/16/初学SQLite/">初学SQLite</a>
+    </h1>
+  
+
+        
+        <a href="/2015/01/16/初学SQLite/" class="archive-article-date">
+  	<time datetime="2015-01-16T10:28:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>SQLite 是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。 与其他数据库管理系统不同，SQLite 的安装和运行非常简单，在大多数情况下 - 只要确保SQLite的二进制文件存在即可开始创建、连接和使用数据库。如果您正在寻找一个嵌入式数据库项目或解决方案，SQLite是绝对值得考虑。</p>
+<h2 id="SQLite-on-Mac-OS-X"><a href="#SQLite-on-Mac-OS-X" class="headerlink" title="SQLite on Mac OS X"></a>SQLite on Mac OS X</h2><p>如果你正在使用 Mac OS 雪豹或者更新版本的系统，那么系统上已经装有 SQLite 了。</p>
+<h4 id="创建首个-SQLite-数据库"><a href="#创建首个-SQLite-数据库" class="headerlink" title="创建首个 SQLite 数据库"></a>创建首个 SQLite 数据库</h4><p>现在你已经安装了 SQLite 数据库，接下来我们创建首个数据库。在命令行窗口中输入如下命令来创建一个名为  test.db 的数据库(如果数据库存在则进入数据库).<br>
+        
+          <a class="article-more-a" href="/2015/01/16/初学SQLite/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">sqlite</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/01/16/初学SQLite/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-给博客绑定域名" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -460,6 +587,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
               </li>
              
@@ -469,6 +600,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">

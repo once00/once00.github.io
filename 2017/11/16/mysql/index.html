@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://once00.github.io">
-  <title>github下404问题的解决 | Once的博客</title>
+  <title>mysql | Once的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="123456非常喜欢jekyll的简洁,特别是github下可以自动生成网页,但有的时候在本地是ok的,push到github无论如何总是显示404,检查各种设置也是正常的. 看 这里解决的方法很简单,打开项目的setting,点击 Automatic page generator,先使用自带的功能创建页面,然后打开 username.github.io,确认可以访问了以后,clone 项目后,删">
-<meta name="keywords" content="github">
+  <meta name="description" content="mysql 做个记录,老是忘记   首先查看数据库  1show databases;  进入数据库  1use db_name;  显示所有的表  1show tables; ##备份4、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql 1#/usr/local/mysql/bin/  mysqldump -uroot -p abc &amp;gt; ab">
+<meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github下404问题的解决">
-<meta property="og:url" content="http://once00.github.io/2015/01/15/github下404问题的解决/index.html">
+<meta property="og:title" content="mysql">
+<meta property="og:url" content="http://once00.github.io/2017/11/16/mysql/index.html">
 <meta property="og:site_name" content="Once的博客">
-<meta property="og:description" content="123456非常喜欢jekyll的简洁,特别是github下可以自动生成网页,但有的时候在本地是ok的,push到github无论如何总是显示404,检查各种设置也是正常的. 看 这里解决的方法很简单,打开项目的setting,点击 Automatic page generator,先使用自带的功能创建页面,然后打开 username.github.io,确认可以访问了以后,clone 项目后,删">
-<meta property="og:updated_time" content="2017-05-24T05:31:12.000Z">
+<meta property="og:description" content="mysql 做个记录,老是忘记   首先查看数据库  1show databases;  进入数据库  1use db_name;  显示所有的表  1show tables; ##备份4、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql 1#/usr/local/mysql/bin/  mysqldump -uroot -p abc &amp;gt; ab">
+<meta property="og:updated_time" content="2017-11-16T04:41:04.009Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github下404问题的解决">
-<meta name="twitter:description" content="123456非常喜欢jekyll的简洁,特别是github下可以自动生成网页,但有的时候在本地是ok的,push到github无论如何总是显示404,检查各种设置也是正常的. 看 这里解决的方法很简单,打开项目的setting,点击 Automatic page generator,先使用自带的功能创建页面,然后打开 username.github.io,确认可以访问了以后,clone 项目后,删">
+<meta name="twitter:title" content="mysql">
+<meta name="twitter:description" content="mysql 做个记录,老是忘记   首先查看数据库  1show databases;  进入数据库  1use db_name;  显示所有的表  1show tables; ##备份4、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql 1#/usr/local/mysql/bin/  mysqldump -uroot -p abc &amp;gt; ab">
   
     <link rel="alternative" href="/atom.xml" title="Once的博客" type="application/atom+xml">
   
@@ -146,27 +146,58 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-github下404问题的解决" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-mysql" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      github下404问题的解决
+      mysql
     </h1>
   
 
         
-        <a href="/2015/01/15/github下404问题的解决/" class="archive-article-date">
-  	<time datetime="2015-01-15T09:12:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-15</time>
+        <a href="/2017/11/16/mysql/" class="archive-article-date">
+  	<time datetime="2017-11-16T02:58:21.261Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">非常喜欢jekyll的简洁,特别是github下可以自动生成网页,</div><div class="line"></div><div class="line">但有的时候在本地是ok的,push到github无论如何总是显示<span class="number">404</span>,检查各种设置也是正常的. 看 这里</div><div class="line"></div><div class="line">解决的方法很简单,打开项目的setting,点击 Automatic page generator,先使用自带的功能创建页面,然后打开 username.github.io,确认可以访问了以后,<span class="keyword">clone</span> <span class="title">项目后,删除已有文件,替换你自己的jekyll</span>就可以了. 这里应该是github的一个bug了.</div></pre></td></tr></table></figure>
+        <h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><ul>
+<li>做个记录,老是忘记</li>
+</ul>
+<ol>
+<li>首先查看数据库</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</div></pre></td></tr></table></figure>
+<ol>
+<li>进入数据库</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> <span class="title">db_name</span>;</div></pre></td></tr></table></figure>
+<ol>
+<li>显示所有的表</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</div></pre></td></tr></table></figure>
+<p>##备份<br>4、导出数据和表结构：<br>mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">/usr/<span class="built_in">local</span>/mysql/bin/  mysqldump -uroot -p abc &gt; abc.sql</span></div></pre></td></tr></table></figure>
+<p>敲回车后会提示输入密码</p>
+<p>5、只导出表结构<br>mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">/usr/<span class="built_in">local</span>/mysql/bin/   mysqldump -uroot -p <span class="_">-d</span> abc &gt; abc.sql</span></div></pre></td></tr></table></figure>
+<p>注：/usr/local/mysql/bin/  —&gt;  mysql的data目录</p>
+<p>6.导入数据表</p>
+<ul>
+<li>进入到<code>mysql&gt;</code></li>
+<li>输入命令<code>show databases；</code>，回车，看看有些什么数据库；</li>
+<li>建立你要还原的数据库，输入<code>create database back；</code>，回车；</li>
+<li>切换到刚建立的数据库，输入<code>use back；</code>，回车；</li>
+<li>导入数据，输入<code>source back.sql；</code>，回车，</li>
+<li>开始导入，再次出现<code>mysql&gt;</code>并且没有提示错误即还原成功。</li>
+<li>注意back.sql要有路径名，例如：source /home/user/data/back.sql</li>
+</ul>
+
       
 
       
@@ -205,7 +236,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
         		</li>
       		
 		</ul>
@@ -261,7 +292,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://once00.github.io/2015/01/15/github下404问题的解决/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://once00.github.io/2017/11/16/mysql/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -275,15 +306,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/01/16/hexo搭建/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/16/ThinkPHP/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo搭建
+          ThinkPHP
         
       </div>
     </a>
   
+  
+    <a href="/2017/10/10/制作自己的CocoaPods库/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">制作自己的CocoaPods库</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -296,7 +332,7 @@
   
 
   
-  <div id="SOHUCS" sid="github下404问题的解决" ></div> 
+  <div id="SOHUCS" sid="mysql" ></div> 
 <script type="text/javascript"> 
 (function(){ 
 var appid = "cyt1MuumL"; 

@@ -144,6 +144,157 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ThinkPHP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/ThinkPHP/">ThinkPHP</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/16/ThinkPHP/" class="archive-article-date">
+  	<time datetime="2017-11-16T04:41:51.533Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ThinkPHP"><a href="#ThinkPHP" class="headerlink" title="ThinkPHP"></a>ThinkPHP</h1><p>错误<br><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">failed <span class="keyword">to</span> <span class="keyword">open</span> stream: Permission denied</div></pre></td></tr></table></figure></p>
+<p>解决办法：<br>1、登录到服务器，找到本程序所在目录，假设为“example”；<br>2、执行命令“chown www:www example -R”；</p>
+<p>使用<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> think\controller报错“<span class="keyword">Class</span> <span class="string">'think\controller'</span> <span class="keyword">not</span> <span class="keyword">found</span></div></pre></td></tr></table></figure></p>
+<p>解决办法:<br>原来是Controller 没有大写造成的！</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">thinkphp</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/16/ThinkPHP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-mysql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/16/mysql/">mysql</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/16/mysql/" class="archive-article-date">
+  	<time datetime="2017-11-16T02:58:21.261Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h1><ul>
+<li>做个记录,老是忘记</li>
+</ul>
+<ol>
+<li>首先查看数据库</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</div></pre></td></tr></table></figure>
+<ol>
+<li>进入数据库</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> <span class="title">db_name</span>;</div></pre></td></tr></table></figure>
+<ol>
+<li>显示所有的表</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</div></pre></td></tr></table></figure>
+<p>##备份<br>4、导出数据和表结构：<br>mysqldump -u用户名 -p密码 数据库名 &gt; 数据库名.sql</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">/usr/<span class="built_in">local</span>/mysql/bin/  mysqldump -uroot -p abc &gt; abc.sql</span></div></pre></td></tr></table></figure>
+<p>敲回车后会提示输入密码</p>
+<p>5、只导出表结构<br>mysqldump -u用户名 -p密码 -d 数据库名 &gt; 数据库名.sql</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash">/usr/<span class="built_in">local</span>/mysql/bin/   mysqldump -uroot -p <span class="_">-d</span> abc &gt; abc.sql</span></div></pre></td></tr></table></figure>
+<p>注：/usr/local/mysql/bin/  —&gt;  mysql的data目录</p>
+<p>6.导入数据表</p>
+<ul>
+<li>进入到<code>mysql&gt;</code></li>
+<li>输入命令<code>show databases；</code>，回车，看看有些什么数据库；</li>
+<li>建立你要还原的数据库，输入<code>create database back；</code>，回车；</li>
+<li>切换到刚建立的数据库，输入<code>use back；</code>，回车；</li>
+<li>导入数据，输入<code>source back.sql；</code>，回车，</li>
+<li>开始导入，再次出现<code>mysql&gt;</code>并且没有提示错误即还原成功。</li>
+<li>注意back.sql要有路径名，例如：source /home/user/data/back.sql</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/16/mysql/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-制作自己的CocoaPods库" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -271,6 +422,71 @@
 
 
   
+    <article id="post-简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/" class="archive-article-date">
+  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="本文讲解的是用命令行制作"><a href="#本文讲解的是用命令行制作" class="headerlink" title="本文讲解的是用命令行制作"></a>本文讲解的是用命令行制作</h1><pre><code>一.准备工作
+</code></pre><p>1.准备一个 8GB 或以上容量的 U 盘，确保里面的数据已经妥善备份好（该过程会抹掉 U 盘全部数据）</p>
+<p>2.从这里下载苹果官方 OS X Yosemite 正式版的安装程序</p>
+<p>3.如果你是从 Mac AppStore 下载的，下载完成后安装程序可能自动开始，这时先退出安装</p>
+<p>4.把下载完的系统移动到「应用程序」文件夹里面</p>
+        
+          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-MAC系统下更改host文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -325,71 +541,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/" class="archive-article-date">
-  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="本文讲解的是用命令行制作"><a href="#本文讲解的是用命令行制作" class="headerlink" title="本文讲解的是用命令行制作"></a>本文讲解的是用命令行制作</h1><pre><code>一.准备工作
-</code></pre><p>1.准备一个 8GB 或以上容量的 U 盘，确保里面的数据已经妥善备份好（该过程会抹掉 U 盘全部数据）</p>
-<p>2.从这里下载苹果官方 OS X Yosemite 正式版的安装程序</p>
-<p>3.如果你是从 Mac AppStore 下载的，下载完成后安装程序可能自动开始，这时先退出安装</p>
-<p>4.把下载完的系统移动到「应用程序」文件夹里面</p>
-        
-          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">展开全文 >></a>
         </p>
       
 
@@ -533,133 +684,6 @@
 
 
   
-    <article id="post-Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/">Xcode6 使用MJRefresh，Too many arguments to function call, expected 0, have *</a>
-    </h1>
-  
-
-        
-        <a href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/" class="archive-article-date">
-  	<time datetime="2015-01-20T08:50:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>将Xcode升级到6后，报Too many arguments to function call, expected 0, have *，在Xcode5.1里能编译通过的，到Xcode6就报错</p>
-<pre><code>objc_msgSend(self.beginRefreshingTaget, self.beginRefreshingAction, self);
-Too many arguments to function call, expected 0, have *
-</code></pre><p>选中项目 <strong>- Project - Build Settings - ENABLE_STRICT_OBJC_MSGSEND</strong> 将其设置为 <strong>NO</strong> 即可<br>
-        
-          <a class="article-more-a" href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">objective-c</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/01/20/Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-初学SQLite" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/16/初学SQLite/">初学SQLite</a>
-    </h1>
-  
-
-        
-        <a href="/2015/01/16/初学SQLite/" class="archive-article-date">
-  	<time datetime="2015-01-16T10:28:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>SQLite 是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。 与其他数据库管理系统不同，SQLite 的安装和运行非常简单，在大多数情况下 - 只要确保SQLite的二进制文件存在即可开始创建、连接和使用数据库。如果您正在寻找一个嵌入式数据库项目或解决方案，SQLite是绝对值得考虑。</p>
-<h2 id="SQLite-on-Mac-OS-X"><a href="#SQLite-on-Mac-OS-X" class="headerlink" title="SQLite on Mac OS X"></a>SQLite on Mac OS X</h2><p>如果你正在使用 Mac OS 雪豹或者更新版本的系统，那么系统上已经装有 SQLite 了。</p>
-<h4 id="创建首个-SQLite-数据库"><a href="#创建首个-SQLite-数据库" class="headerlink" title="创建首个 SQLite 数据库"></a>创建首个 SQLite 数据库</h4><p>现在你已经安装了 SQLite 数据库，接下来我们创建首个数据库。在命令行窗口中输入如下命令来创建一个名为  test.db 的数据库(如果数据库存在则进入数据库).<br>
-        
-          <a class="article-more-a" href="/2015/01/16/初学SQLite/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">sqlite</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/01/16/初学SQLite/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -748,6 +772,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
               </li>
              
@@ -757,6 +785,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
