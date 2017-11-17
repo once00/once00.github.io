@@ -257,6 +257,59 @@
 <li>开始导入，再次出现<code>mysql&gt;</code>并且没有提示错误即还原成功。</li>
 <li>注意back.sql要有路径名，例如：source /home/user/data/back.sql</li>
 </ul>
+<p>##一、拥有原来的myql的root的密码；</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> mysql -uroot -p</span></div><div class="line">Enter password: 【输入原来的密码】（如果安装完mysql第一次设置root密码，则直接回车）</div><div class="line"><span class="meta">mysql&gt;</span><span class="bash">use mysql;</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> update user <span class="built_in">set</span> password=password(<span class="string">"123456"</span>) <span class="built_in">where</span> user=<span class="string">'root'</span>;</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> flush privileges;</span></div><div class="line"><span class="meta">mysql&gt;</span><span class="bash"> <span class="built_in">exit</span>;</span></div></pre></td></tr></table></figure>
+<p>##二、忘记原来的myql的root的密码；</p>
+<ol>
+<li>编辑MySQL配置文件my.cnf</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">vi</span> /etc/my.<span class="keyword">cnf</span></div></pre></td></tr></table></figure>
+<ul>
+<li>编辑文件，找到[mysqld]，在下面添加一行skip-grant-tables</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[mysqld]</div><div class="line">skip-<span class="keyword">grant</span>-<span class="keyword">tables</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>:wq!  #保存退出</p>
+</li>
+<li><p>service mysqld restart  #重启MySQL服务</p>
+</li>
+</ul>
+<ol>
+<li>进入MySQL控制台</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">mysql -uroot -p</span></div></pre></td></tr></table></figure>
+<ol>
+<li>修改root密码</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">update</span> mysql.user <span class="keyword">set</span> <span class="keyword">password</span>=<span class="keyword">password</span>(<span class="string">'123456'</span>) <span class="keyword">where</span> <span class="keyword">User</span>=<span class="string">"root"</span> <span class="keyword">and</span> Host=<span class="string">"localhost"</span>;</div><div class="line"><span class="keyword">flush</span> <span class="keyword">privileges</span>; </div><div class="line"><span class="keyword">grant</span> all <span class="keyword">on</span> *.* <span class="keyword">to</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'123456'</span> <span class="keyword">with</span> <span class="keyword">grant</span> <span class="keyword">option</span>;</div></pre></td></tr></table></figure>
+<ol>
+<li>取消/etc/my.cnf中的skip-grant-tables</li>
+</ol>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">vi</span> /etc/my.<span class="keyword">cnf</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>编辑文件，找到[mysqld]，删除skip-grant-tables这一行</p>
+</li>
+<li><p>:wq!  #保存退出</p>
+</li>
+</ul>
+<ol>
+<li>重启mysql</li>
+</ol>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">service mysqld restart</span></div></pre></td></tr></table></figure>
+<ul>
+<li>重启mysql，这个时候mysql的root密码已经修改为123456</li>
+</ul>
+<p>###常用命令<br>如何启动/停止/重启MySQL<br>一、 启动方式</p>
+<p>1、使用 service 启动：<code>service mysqld start</code></p>
+<p>2、使用 mysqld 脚本启动：<code>/etc/inint.d/mysqld start</code></p>
+<p>3、使用 safe_mysqld 启动：safe_mysqld&amp;</p>
+<p>二、停止</p>
+<p>1、使用 service 启动：<code>service mysqld stop</code></p>
+<p>2、使用 mysqld 脚本启动：<code>/etc/inint.d/mysqld stop</code></p>
+<p>3、 <code>mysqladmin shutdown</code></p>
+<p>三、重启</p>
+<p>1、使用 service 启动：<code>service mysqld restart</code></p>
+<p>2、使用 mysqld 脚本启动：<code>/etc/inint.d/mysqld restart</code></p>
 
       
 
@@ -422,71 +475,6 @@
 
 
   
-    <article id="post-简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/" class="archive-article-date">
-  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="本文讲解的是用命令行制作"><a href="#本文讲解的是用命令行制作" class="headerlink" title="本文讲解的是用命令行制作"></a>本文讲解的是用命令行制作</h1><pre><code>一.准备工作
-</code></pre><p>1.准备一个 8GB 或以上容量的 U 盘，确保里面的数据已经妥善备份好（该过程会抹掉 U 盘全部数据）</p>
-<p>2.从这里下载苹果官方 OS X Yosemite 正式版的安装程序</p>
-<p>3.如果你是从 Mac AppStore 下载的，下载完成后安装程序可能自动开始，这时先退出安装</p>
-<p>4.把下载完的系统移动到「应用程序」文件夹里面</p>
-        
-          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-MAC系统下更改host文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -541,6 +529,71 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/" class="archive-article-date">
+  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="本文讲解的是用命令行制作"><a href="#本文讲解的是用命令行制作" class="headerlink" title="本文讲解的是用命令行制作"></a>本文讲解的是用命令行制作</h1><pre><code>一.准备工作
+</code></pre><p>1.准备一个 8GB 或以上容量的 U 盘，确保里面的数据已经妥善备份好（该过程会抹掉 U 盘全部数据）</p>
+<p>2.从这里下载苹果官方 OS X Yosemite 正式版的安装程序</p>
+<p>3.如果你是从 Mac AppStore 下载的，下载完成后安装程序可能自动开始，这时先退出安装</p>
+<p>4.把下载完的系统移动到「应用程序」文件夹里面</p>
+        
+          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/27/简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程/">展开全文 >></a>
         </p>
       
 
@@ -796,11 +849,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
               </li>
             
             <div class="clearfix"></div>
