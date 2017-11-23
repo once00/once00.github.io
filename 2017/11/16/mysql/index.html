@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://once00.github.io/2017/11/16/mysql/index.html">
 <meta property="og:site_name" content="Once的博客">
 <meta property="og:description" content="mysql 做个记录,老是忘记   首先查看数据库  1show databases;  进入数据库  1use db_name;  显示所有的表  1show tables; ##备份4、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql 1#/usr/local/mysql/bin/  mysqldump -uroot -p abc &amp;gt; ab">
-<meta property="og:updated_time" content="2017-11-16T06:47:09.347Z">
+<meta property="og:updated_time" content="2017-11-23T09:39:36.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql">
 <meta name="twitter:description" content="mysql 做个记录,老是忘记   首先查看数据库  1show databases;  进入数据库  1use db_name;  显示所有的表  1show tables; ##备份4、导出数据和表结构：mysqldump -u用户名 -p密码 数据库名 &amp;gt; 数据库名.sql 1#/usr/local/mysql/bin/  mysqldump -uroot -p abc &amp;gt; ab">
@@ -250,6 +250,13 @@
 <p>三、重启</p>
 <p>1、使用 service 启动：<code>service mysqld restart</code></p>
 <p>2、使用 mysqld 脚本启动：<code>/etc/inint.d/mysqld restart</code></p>
+<p>四:其他<br>1.把表默认的字符集和所有字符列（CHAR,VARCHAR,TEXT）改为新的字符集：<br><code>ALTER TABLE tbl_name CONVERT TO CHARACTER SET character_name [COLLATE ...]</code><br>例如:<br><code>ALTER TABLE logtest CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;</code><br>2.只是修改表的默认字符集：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> character_name [COLLATE...];</div></pre></td></tr></table></figure></p>
+<p>例如:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> logtest <span class="keyword">DEFAULT</span> <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8 <span class="keyword">COLLATE</span> utf8_general_ci;</div></pre></td></tr></table></figure></p>
+<p>3.修改字段的字符集：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">CHANGE</span> c_name c_name <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> character_name [<span class="keyword">COLLATE</span> ...];</div></pre></td></tr></table></figure></p>
+<p>例如:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> logtest <span class="keyword">CHANGE</span> title title <span class="built_in">VARCHAR</span>(<span class="number">100</span>) <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8 <span class="keyword">COLLATE</span> utf8_general_ci;</div></pre></td></tr></table></figure></p>
+<p>4.查看数据库编码：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SHOW</span> <span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> db_name;</div></pre></td></tr></table></figure></p>
+<p>5.查看表编码：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SHOW</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tbl_name;</div></pre></td></tr></table></figure></p>
+<p>6.查看字段编码：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SHOW</span> <span class="keyword">FULL</span> <span class="keyword">COLUMNS</span> <span class="keyword">FROM</span> tbl_name;</div></pre></td></tr></table></figure></p>
 
       
 
@@ -479,11 +486,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -492,10 +503,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">

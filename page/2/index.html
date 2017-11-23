@@ -144,6 +144,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-UploadImageByAFNetworking" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/20/UploadImageByAFNetworking/">UploadImageByAFNetworking</a>
+    </h1>
+  
+
+        
+        <a href="/2015/01/20/UploadImageByAFNetworking/" class="archive-article-date">
+  	<time datetime="2015-01-20T09:08:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>准备工作：界面放置UIImageView，设置默认的图片属性，生成相应的输出口，声明图像选取器(UIImagePickerController)属性，然后在viewDidLoad方法中添加如下代码：</p>
+<ol>
+<li>给图像视图添加轻拍手势</li>
+<li>设置手势属性：一个手指单击一次</li>
+<li>给界面图像视图绑定手势</li>
+<li>设置界面图像视图能够与用户交互</li>
+<li>初始化图像选取控制器</li>
+<li>设置图像选取器的委托</li>
+</ol>
+<p><strong>参考代码：</strong></p>
+<p>1.给图像视图添加轻拍手势</p>
+<pre><code>UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImage:)];
+</code></pre><p>2.设置手势属性：一个手指单击一次<br>
+        
+          <a class="article-more-a" href="/2015/01/20/UploadImageByAFNetworking/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">objective-c</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/01/20/UploadImageByAFNetworking/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-Xcode6-使用MJRefresh，Too-many-arguments-to-function-call-expected-0-have" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -587,11 +660,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -600,10 +677,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
               <li class="article-tag-list-item">
