@@ -170,7 +170,7 @@
 <ol>
 <li>首先查看数据库</li>
 </ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</span><br></pre></td></tr></table></figure>
 <ol>
 <li>进入数据库
         
@@ -296,7 +296,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>错误<br><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">failed <span class="keyword">to</span> <span class="keyword">open</span> stream: Permission denied</div></pre></td></tr></table></figure></p>
+        <p>错误<br><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">failed <span class="keyword">to</span> <span class="keyword">open</span> stream: Permission denied</span><br></pre></td></tr></table></figure></p>
 <p>解决办法：<br>1、登录到服务器，找到本程序所在目录，假设为“example”；<br>2、执行命令“chown www:www example -R”；</p>
         
           <a class="article-more-a" href="/2017/11/16/ThinkPHP/#more">more >></a>
@@ -465,74 +465,6 @@
 
 
   
-    <article id="post-MAC系统下更改host文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/27/MAC系统下更改host文件/">MAC系统下更改host文件</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/27/MAC系统下更改host文件/" class="archive-article-date">
-  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-终端更改"><a href="#1-终端更改" class="headerlink" title="1.终端更改"></a>1.终端更改</h2><ul>
-<li><p>1.在应用程序里面打开终端(terminal)</p>
-</li>
-<li><p>2.输入sudo vi /etc/hosts</p>
-</li>
-<li><p>3.提示输入系统密码(输入密码是默认隐藏的，直接输入回车)hosts文件    就自动打开了(有时候打不开,在敲次回车)</p>
-</li>
-<li><p>4.打开此网站生成host文件:</p>
-<p>  <a href="http://serve.netsh.org/pub/gethosts.php" target="_blank" rel="external">http://serve.netsh.org/pub/gethosts.php</a></p>
-</li>
-</ul>
-<ul>
-<li><p>5.接着输入 i 进入编辑模式将添加的网站,ip拷贝进去</p>
-</li>
-<li><p>6.编辑完成之后,按esc,输入 : wq</p>
-</li>
-</ul>
-<h2 id="2-直接修改本地文件"><a href="#2-直接修改本地文件" class="headerlink" title="2.直接修改本地文件"></a>2.直接修改本地文件</h2><ul>
-<li>1.打开finder ,在前往里面选择前往文件夹(快捷键shift+comman+g)     在弹出框里输入 /private/etc
-        
-          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
     <article id="post-简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -598,6 +530,74 @@
 
 
   
+    <article id="post-MAC系统下更改host文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/27/MAC系统下更改host文件/">MAC系统下更改host文件</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/27/MAC系统下更改host文件/" class="archive-article-date">
+  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-终端更改"><a href="#1-终端更改" class="headerlink" title="1.终端更改"></a>1.终端更改</h2><ul>
+<li><p>1.在应用程序里面打开终端(terminal)</p>
+</li>
+<li><p>2.输入sudo vi /etc/hosts</p>
+</li>
+<li><p>3.提示输入系统密码(输入密码是默认隐藏的，直接输入回车)hosts文件    就自动打开了(有时候打不开,在敲次回车)</p>
+</li>
+<li><p>4.打开此网站生成host文件:</p>
+<p>  <a href="http://serve.netsh.org/pub/gethosts.php" target="_blank" rel="noopener">http://serve.netsh.org/pub/gethosts.php</a></p>
+</li>
+</ul>
+<ul>
+<li><p>5.接着输入 i 进入编辑模式将添加的网站,ip拷贝进去</p>
+</li>
+<li><p>6.编辑完成之后,按esc,输入 : wq</p>
+</li>
+</ul>
+<h2 id="2-直接修改本地文件"><a href="#2-直接修改本地文件" class="headerlink" title="2.直接修改本地文件"></a>2.直接修改本地文件</h2><ul>
+<li>1.打开finder ,在前往里面选择前往文件夹(快捷键shift+comman+g)     在弹出框里输入 /private/etc
+        
+          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-CocoaPods安装和使用教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -619,11 +619,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="如何下载和安装CocoaPods？"><a href="#如何下载和安装CocoaPods？" class="headerlink" title="如何下载和安装CocoaPods？"></a>如何下载和安装CocoaPods？</h2><p>我们可以用淘宝的Ruby镜像来访问cocoapods。按照下面的顺序在终端中敲入依次敲入命令：</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ gem sources --<span class="built_in">remove</span> https:<span class="comment">//rubygems.org/</span></div></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem sources --<span class="built_in">remove</span> https:<span class="comment">//rubygems.org/</span></span><br></pre></td></tr></table></figure>
 <p>等有反应之后再敲入以下命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> gem sources <span class="_">-a</span> http://ruby.taobao.org/</span></div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem sources -<span class="selector-tag">a</span> http:<span class="comment">//ruby.taobao.org/</span></span><br></pre></td></tr></table></figure>
 <p>为了验证你的Ruby镜像是并且仅是taobao，可以用以下命令查看：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> gem sources <span class="_">-l</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> gem sources -l</span></span><br></pre></td></tr></table></figure>
 <p>只有在终端中出现下面文字才表明你上面的命令是成功的：<br>
         
           <a class="article-more-a" href="/2015/01/21/CocoaPods安装和使用教程/#more">more >></a>
@@ -766,11 +766,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,7 +8,7 @@
   <link rel="dns-prefetch" href="http://once00.github.io">
   <title>初学SQLite | Once的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SQLite 是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。 与其他数据库管理系统不同，SQLite 的安装和运行非常简单，在大多数情况下 - 只要确保SQLite的二进制文件存在即可开始创建、连接和使用数据库。如果您正在寻找一个嵌入式数据库项目或解决方案，SQLite是绝对值得考虑。 SQLite on Mac">
+  <meta name="description" content="SQLite 是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。 与其他数据库管理系统不同，SQLite 的安装和运行非常简单，在大多数情况下 - 只要确保SQLite的二进制文件存在即可开始创建、连接和使用数据库。如果您正在寻找一个嵌入式">
 <meta name="keywords" content="sqlite">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初学SQLite">
@@ -168,75 +168,75 @@
       
         <p>SQLite 是一个开源的嵌入式关系数据库，实现自包容、零配置、支持事务的SQL数据库引擎。 其特点是高度便携、使用方便、结构紧凑、高效、可靠。 与其他数据库管理系统不同，SQLite 的安装和运行非常简单，在大多数情况下 - 只要确保SQLite的二进制文件存在即可开始创建、连接和使用数据库。如果您正在寻找一个嵌入式数据库项目或解决方案，SQLite是绝对值得考虑。</p>
 <h2 id="SQLite-on-Mac-OS-X"><a href="#SQLite-on-Mac-OS-X" class="headerlink" title="SQLite on Mac OS X"></a>SQLite on Mac OS X</h2><p>如果你正在使用 Mac OS 雪豹或者更新版本的系统，那么系统上已经装有 SQLite 了。</p>
-<h4 id="创建首个-SQLite-数据库"><a href="#创建首个-SQLite-数据库" class="headerlink" title="创建首个 SQLite 数据库"></a>创建首个 SQLite 数据库</h4><p>现在你已经安装了 SQLite 数据库，接下来我们创建首个数据库。在命令行窗口中输入如下命令来创建一个名为  test.db 的数据库(如果数据库存在则进入数据库).<br><a id="more"></a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sqlite3 test.db</span></div></pre></td></tr></table></figure></p>
+<h4 id="创建首个-SQLite-数据库"><a href="#创建首个-SQLite-数据库" class="headerlink" title="创建首个 SQLite 数据库"></a>创建首个 SQLite 数据库</h4><p>现在你已经安装了 SQLite 数据库，接下来我们创建首个数据库。在命令行窗口中输入如下命令来创建一个名为  test.db 的数据库(如果数据库存在则进入数据库).<br><a id="more"></a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sqlite3 test.db</span></span><br></pre></td></tr></table></figure></p>
 <p>进入了sqlite3之后，会看到以下文字：</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SQLite <span class="built_in">version</span> <span class="number">3.7</span><span class="number">.12</span> <span class="number">2012</span><span class="number">-04</span><span class="number">-03</span> <span class="number">19</span>:<span class="number">43</span>:<span class="number">07</span>Enter <span class="string">".help"</span> <span class="keyword">for</span> instructionsEnter SQL statements terminated <span class="keyword">with</span> <span class="keyword">a</span> <span class="string">";"</span>sqlite&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SQLite <span class="built_in">version</span> <span class="number">3.7</span><span class="number">.12</span> <span class="number">2012</span><span class="number">-04</span><span class="number">-03</span> <span class="number">19</span>:<span class="number">43</span>:<span class="number">07</span>Enter <span class="string">".help"</span> <span class="keyword">for</span> instructionsEnter SQL statements terminated <span class="keyword">with</span> <span class="keyword">a</span> <span class="string">";"</span>sqlite&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>这时如果使用.help可以取得求助，.quit则是离开</li>
 </ul>
 <h4 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h4><pre><code>$ sqlite&gt; create table mytable(id integer primary key, value text);
 
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">* 该表包含一个名为 id 的主键字段和一个名为 value 的文本字段。</div><div class="line">#### 往表里中写入一些数据</div></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 该表包含一个名为 id 的主键字段和一个名为 value 的文本字段。</span><br><span class="line">#### 往表里中写入一些数据</span><br></pre></td></tr></table></figure>
 
 sqlite&gt; insert into mytable(id, value) values(1, &apos;Micheal&apos;);
 sqlite&gt; insert into mytable(id, value) values(2, &apos;Jenny&apos;);
 sqlite&gt; insert into mytable(value) values(&apos;Francis&apos;);
 sqlite&gt; insert into mytable(value) values(&apos;Kerk&apos;);
 
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#### 查询数据</div></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 查询数据</span><br></pre></td></tr></table></figure>
 
 sqlite&gt; select * from test;
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="bullet">* </span>结果显示如下:</div></pre></td></tr></table></figure>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">* </span>结果显示如下:</span><br></pre></td></tr></table></figure>
 
 1|Micheal
 2|Jenny
 3|Francis
 4|Kerk
 
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*<span class="strong">*设置格式化查询结果:*</span><span class="strong">*</span></div></pre></td></tr></table></figure>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*<span class="strong">*设置格式化查询结果:*</span><span class="strong">*</span></span><br></pre></td></tr></table></figure>
 
 sqlite&gt; .mode column
 sqlite&gt; .header on
 sqlite&gt; select * from test;
 </code></pre><p>显示结果如下</p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">id          value----------- -------------<span class="number">1</span>           Micheal<span class="number">2</span>           Jenny<span class="number">3</span>           Francis<span class="number">4</span>           Kerk</div></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id          value----------- -------------<span class="number">1</span>           Micheal<span class="number">2</span>           Jenny<span class="number">3</span>           Francis<span class="number">4</span>           Kerk</span><br></pre></td></tr></table></figure>
 <ul>
 <li>.mode column 将设置为列显示模式，.header on将显示列名</li>
 </ul>
 <h4 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h4><ul>
 <li>修改表结构，增加列</li>
 </ul>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; alter <span class="keyword">table</span> mytable <span class="comment">add column email text not null</span> <span class="comment">''</span><span class="comment"> collate nocase</span>;;</div></pre></td></tr></table></figure>
-<h4 id="创建视图"><a href="#创建视图" class="headerlink" title="创建视图"></a>创建视图</h4><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; <span class="keyword">create</span> <span class="keyword">view</span> nameview <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> mytable;</div></pre></td></tr></table></figure>
-<h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; <span class="keyword">create</span> <span class="keyword">index</span> test_idx <span class="keyword">on</span> mytable(<span class="keyword">value</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlite&gt; alter <span class="keyword">table</span> mytable <span class="comment">add column email text not null</span> <span class="comment">''</span><span class="comment"> collate nocase</span>;;</span><br></pre></td></tr></table></figure>
+<h4 id="创建视图"><a href="#创建视图" class="headerlink" title="创建视图"></a>创建视图</h4><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlite&gt; <span class="keyword">create</span> <span class="keyword">view</span> nameview <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> mytable;</span><br></pre></td></tr></table></figure>
+<h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlite&gt; <span class="keyword">create</span> <span class="keyword">index</span> test_idx <span class="keyword">on</span> mytable(<span class="keyword">value</span>);</span><br></pre></td></tr></table></figure>
 <h4 id="一些有用的-SQLite-命令-命令最后不用加分号"><a href="#一些有用的-SQLite-命令-命令最后不用加分号" class="headerlink" title="一些有用的 SQLite 命令(命令最后不用加分号)"></a>一些有用的 SQLite 命令(命令最后不用加分号)</h4><ul>
 <li>显示表结构</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash">　sqlite&gt; .schema [tablename]</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">　sqlite&gt; .schema [tablename]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>获取所有表和视图</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sqlite&gt; .schema [tablename]</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sqlite&gt; .schema [tablename]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>获取指定表的索引列表</li>
 </ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sqlite &gt; <span class="selector-class">.indices</span> [<span class="selector-tag">table</span> ]</div></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sqlite &gt; <span class="selector-class">.indices</span> [<span class="selector-tag">table</span> ]</span><br></pre></td></tr></table></figure>
 <ul>
 <li>导出数据库到 SQL 文件</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sqlite &gt; .output [filename ] </span><span class="meta">$</span><span class="bash"> sqlite &gt; .dump </span><span class="meta">$</span><span class="bash"> sqlite &gt; .output stdout</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sqlite &gt; .output [filename ] </span><span class="meta">$</span><span class="bash"> sqlite &gt; .dump </span><span class="meta">$</span><span class="bash"> sqlite &gt; .output stdout</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>从 SQL 文件导入数据库</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sqlite &gt; .read [filename ]</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sqlite &gt; .<span class="built_in">read</span> [filename ]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>格式化输出数据到 CSV 格式</li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> sqlite &gt;.output [filename.csv ] </span></div><div class="line"><span class="meta">$</span><span class="bash"> sqlite &gt;.separator</span></div><div class="line"><span class="meta">$</span><span class="bash"> sqlite &gt; select * from <span class="built_in">test</span>; </span></div><div class="line"><span class="meta">$</span><span class="bash"> sqlite &gt;.output stdout</span></div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sqlite &gt;.output [filename.csv ] </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sqlite &gt;.separator</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sqlite &gt; select * from <span class="built_in">test</span>; </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sqlite &gt;.output stdout</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>从 CSV 文件导入数据到表中</li>
 </ul>
-<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ sqlite &gt;<span class="keyword">create</span> table newtable ( id integer <span class="keyword">primary</span> <span class="keyword">key</span>, <span class="keyword">value</span> text ); </div><div class="line">$ sqlite &gt;.import [filename.csv ] newtable</div></pre></td></tr></table></figure>
+<figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sqlite &gt;<span class="keyword">create</span> table newtable ( id integer <span class="keyword">primary</span> <span class="keyword">key</span>, <span class="keyword">value</span> text ); </span><br><span class="line">$ sqlite &gt;.import [filename.csv ] newtable</span><br></pre></td></tr></table></figure>
 <ul>
 <li>备份数据库</li>
 </ul>
@@ -498,11 +498,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>

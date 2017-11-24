@@ -8,7 +8,7 @@
   <link rel="dns-prefetch" href="http://once00.github.io">
   <title>UploadImageByAFNetworking | Once的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="准备工作：界面放置UIImageView，设置默认的图片属性，生成相应的输出口，声明图像选取器(UIImagePickerController)属性，然后在viewDidLoad方法中添加如下代码：  给图像视图添加轻拍手势 设置手势属性：一个手指单击一次 给界面图像视图绑定手势 设置界面图像视图能够与用户交互 初始化图像选取控制器 设置图像选取器的委托  参考代码： 1.给图像视图添加轻拍手势">
+  <meta name="description" content="准备工作：界面放置UIImageView，设置默认的图片属性，生成相应的输出口，声明图像选取器(UIImagePickerController)属性，然后在viewDidLoad方法中添加如下代码：  给图像视图添加轻拍手势 设置手势属性：一个手指单击一次 给界面图像视图绑定手势 设置界面图像视图能够与用户交互 初始化">
 <meta name="keywords" content="objective-c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UploadImageByAFNetworking">
@@ -196,7 +196,7 @@ tap.numberOfTouchesRequired = 1;
 
 }
 
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```#pragma mark 图像选取控制器委托方法- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info &#123;	<span class="comment">// 从info字典参数中获取选中的图片（通过UIImagePickerControllerOriginalImage键获取）</span>    <span class="comment">// 设置界面imageView的image属性为选中的图片</span>    <span class="comment">// 关闭图片库</span>&#125;</div><div class="line">```**参考代码：**</div><div class="line">```#pragma mark 单击界面图像视图调用的方法- (void)tapImage:(UIGestureRecognizer *)recognizer &#123;    <span class="comment">// 打开图片库选取图片</span>    [self presentViewController:self.imagePickerController animated:YES completion:nil];&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```#pragma mark 图像选取控制器委托方法- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info &#123;	<span class="comment">// 从info字典参数中获取选中的图片（通过UIImagePickerControllerOriginalImage键获取）</span>    <span class="comment">// 设置界面imageView的image属性为选中的图片</span>    <span class="comment">// 关闭图片库</span>&#125;</span><br><span class="line">```**参考代码：**</span><br><span class="line">```#pragma mark 单击界面图像视图调用的方法- (void)tapImage:(UIGestureRecognizer *)recognizer &#123;    <span class="comment">// 打开图片库选取图片</span>    [self presentViewController:self.imagePickerController animated:YES completion:nil];&#125;</span><br></pre></td></tr></table></figure>
 </code></pre><p>#pragma mark 图像选取控制器委托方法</p>
 <ul>
 <li><p>(void)imagePickerController:(UIImagePickerController <em>)picker didFinishPickingMediaWithInfo:(NSDictionary </em>)info {<br>  // 从info字典参数中获取选中的图片（通过UIImagePickerControllerOriginalImage键获取）<br>  UIImage * image=info[UIImagePickerControllerOriginalImage];<br>  // 设置界面imageView的image属性为选中的图片<br>  self.imageView.image=image;<br>  // 关闭图片库<br>  [self dismissViewControllerAnimated:YES completion:nil];</p>
@@ -230,7 +230,7 @@ tap.numberOfTouchesRequired = 1;
 **- (IBAction)uploadImage:(id)sender {**
 
 1.把图片对象转换成data对象(UIImagePNGRepresentation方法）
-</code></pre><p>NSData *imageData = UIImagePNGRepresentation(self.imageView.image);<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="number">2.</span>保存图片到沙盒中</div><div class="line">```NSString *filePath = [self getFilePath:@<span class="string">"upload.png"</span>];</div><div class="line">[imageData writeToFile:filePath atomically:YES];</div><div class="line">```<span class="number">3.</span>使用AFNetworking上传图片</div></pre></td></tr></table></figure></p>
+</code></pre><p>NSData *imageData = UIImagePNGRepresentation(self.imageView.image);<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.</span>保存图片到沙盒中</span><br><span class="line">```NSString *filePath = [self getFilePath:@<span class="string">"upload.png"</span>];</span><br><span class="line">[imageData writeToFile:filePath atomically:YES];</span><br><span class="line">```<span class="number">3.</span>使用AFNetworking上传图片</span><br></pre></td></tr></table></figure></p>
 <p>// 创建http请求操作管理器（AFHTTPRequestOperationManager类的对象）</p>
 <p>AFHTTPRequestOperationManager * manage=[AFHTTPRequestOperationManager new];</p>
 <pre><code>
@@ -239,7 +239,7 @@ tap.numberOfTouchesRequired = 1;
 <pre><code>5.设置接收响应类型
 </code></pre><p>manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@”text/html”, nil];</p>
 <pre><code>6.创建http请求操作对象
-</code></pre><p>AFHTTPRequestOperation <em>op = [manager POST:kUploadFileURL parameters:nil constructingBodyWithBlock:^(id<afmultipartformdata> formData) {<br><em>*菊花</em></afmultipartformdata></em><br>[MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleFade];<br>[MMProgressHUD showWithTitle:@”上传图片” status:@”上传中。。。”];<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">7.</span>文件路径方式上传图片</div><div class="line">```NSURL *url = [NSURL fileURLWithPath:filePath];[formData appendPartWithFileURL:url name:@<span class="string">"fileName"</span> error:nil];</div><div class="line">```<span class="number">8.</span>data方式上传图片</div><div class="line">```[formData appendPartWithFileData:imageData name:@<span class="string">"fileName"</span> fileName:@<span class="string">"upload.png"</span> mimeType:@<span class="string">"image/png"</span>];*/    &#125; success:^(AFHTTPRequestOperation *operation, id responseObject) &#123;        [MMProgressHUD dismissWithSuccess:@<span class="string">"上传成功！"</span>];        NSLog(@<span class="string">"responseObject:%@"</span>,responseObject);    &#125; failure:^(AFHTTPRequestOperation *operation, NSError *error) &#123;        [MMProgressHUD dismissWithError:@<span class="string">"上传失败！"</span>];        NSLog(@<span class="string">"error:%@"</span>,[error localizedDescription]);    &#125;];</div><div class="line">```<span class="number">8.</span>http请求操作对象发送请求</div><div class="line">```[op start];</div><div class="line">```&#125;</div></pre></td></tr></table></figure></p>
+</code></pre><p>AFHTTPRequestOperation <em>op = [manager POST:kUploadFileURL parameters:nil constructingBodyWithBlock:^(id<afmultipartformdata> formData) {<br><em>*菊花</em></afmultipartformdata></em><br>[MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleFade];<br>[MMProgressHUD showWithTitle:@”上传图片” status:@”上传中。。。”];<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7.</span>文件路径方式上传图片</span><br><span class="line">```NSURL *url = [NSURL fileURLWithPath:filePath];[formData appendPartWithFileURL:url name:@<span class="string">"fileName"</span> error:nil];</span><br><span class="line">```<span class="number">8.</span>data方式上传图片</span><br><span class="line">```[formData appendPartWithFileData:imageData name:@<span class="string">"fileName"</span> fileName:@<span class="string">"upload.png"</span> mimeType:@<span class="string">"image/png"</span>];*/    &#125; success:^(AFHTTPRequestOperation *operation, id responseObject) &#123;        [MMProgressHUD dismissWithSuccess:@<span class="string">"上传成功！"</span>];        NSLog(@<span class="string">"responseObject:%@"</span>,responseObject);    &#125; failure:^(AFHTTPRequestOperation *operation, NSError *error) &#123;        [MMProgressHUD dismissWithError:@<span class="string">"上传失败！"</span>];        NSLog(@<span class="string">"error:%@"</span>,[error localizedDescription]);    &#125;];</span><br><span class="line">```<span class="number">8.</span>http请求操作对象发送请求</span><br><span class="line">```[op start];</span><br><span class="line">```&#125;</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -493,11 +493,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>

@@ -8,7 +8,7 @@
   <link rel="dns-prefetch" href="http://once00.github.io">
   <title>简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程 | Once的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文讲解的是用命令行制作一.准备工作 1.准备一个 8GB 或以上容量的 U 盘，确保里面的数据已经妥善备份好（该过程会抹掉 U 盘全部数据） 2.从这里下载苹果官方 OS X Yosemite 正式版的安装程序 3.如果你是从 Mac AppStore 下载的，下载完成后安装程序可能自动开始，这时先退出安装 4.把下载完的系统移动到「应用程序」文件夹里面">
+  <meta name="description" content="本文讲解的是用命令行制作一.准备工作 1.准备一个 8GB 或以上容量的 U 盘，确保里面的数据已经妥善备份好（该过程会抹掉 U 盘全部数据） 2.从这里下载苹果官方 OS X Yosemite 正式版的安装程序 3.如果你是从 Mac AppStore 下载的，下载完成后安装程序可能自动开始，这时先退出安装 4.把下">
 <meta name="keywords" content="blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程">
@@ -203,9 +203,9 @@
 <li><p>复制下面的命令，并粘贴到「终端」里，按回车运行：</p>
 </li>
 </ol>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo <span class="string">/Applications/Install</span>\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia <span class="params">--volume</span> <span class="string">/Volumes/iPlaySoft</span> <span class="params">--applicationpath</span> <span class="string">/Applications/Install</span>\ OS\ X\ Yosemite.app <span class="params">--nointeraction</span></div></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="string">/Applications/Install</span>\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia <span class="params">--volume</span> <span class="string">/Volumes/iPlaySoft</span> <span class="params">--applicationpath</span> <span class="string">/Applications/Install</span>\ OS\ X\ Yosemite.app <span class="params">--nointeraction</span></span><br></pre></td></tr></table></figure>
 <p>回车后，系统会提示你输入管理员密码，接下来就是等待系统开始制作启动盘了,会如下提示就说明已经完成了</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Erasing Disk: <span class="number">0</span>%<span class="params">...</span> <span class="number">10</span>%<span class="params">...</span> <span class="number">20</span>%<span class="params">...</span> <span class="number">30</span>%<span class="params">...</span><span class="number">100</span>%<span class="params">...</span></div><div class="line">Copying installer files <span class="keyword">to</span> disk<span class="params">...</span></div><div class="line">Copy complete.</div><div class="line">Making disk bootable<span class="params">...</span></div><div class="line">Copying boot files<span class="params">...</span></div><div class="line">Copy complete.</div><div class="line">Done.</div></pre></td></tr></table></figure>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Erasing Disk: <span class="number">0</span>%<span class="params">...</span> <span class="number">10</span>%<span class="params">...</span> <span class="number">20</span>%<span class="params">...</span> <span class="number">30</span>%<span class="params">...</span><span class="number">100</span>%<span class="params">...</span></span><br><span class="line">Copying installer files <span class="keyword">to</span> disk<span class="params">...</span></span><br><span class="line">Copy complete.</span><br><span class="line">Making disk bootable<span class="params">...</span></span><br><span class="line">Copying boot files<span class="params">...</span></span><br><span class="line">Copy complete.</span><br><span class="line">Done.</span><br></pre></td></tr></table></figure>
 <pre><code>四.U 盘启动安装系统
 </code></pre><p>开机一直按住「option」(alt) 按键不放,后面步骤不详细介绍</p>
 
@@ -317,18 +317,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2015/07/27/MAC系统下更改host文件/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/24/github简单的命令/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MAC系统下更改host文件
+          github简单的命令
         
       </div>
     </a>
   
   
-    <a href="/2015/01/21/CocoaPods安装和使用教程/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CocoaPods安装和使用教程</div>
+    <a href="/2015/07/27/MAC系统下更改host文件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MAC系统下更改host文件</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -461,11 +461,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>
