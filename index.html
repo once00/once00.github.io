@@ -195,52 +195,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##公共<br>不管是微信支付还是支付宝支付,前提条件都是Xcode中<code>TARGETS</code>中选择<code>info</code>中的    <code>URL scheme</code>中配置相关url(注意:支付宝随便填写,只要不跟别人APP名称重复就行,微信必须使用微信开发者平台的appid 如:wx<strong><strong><strong>*</strong></strong></strong>)</p>
-<p>##微信支付<br>网址:<a href="https://open.weixin.qq.com" target="_blank" rel="external">https://open.weixin.qq.com</a></p>
-<ul>
-<li>启动IDE（如Xcode），把iOS包中的压缩文件中以下文件拷贝到项目文件夹下，并导入到项目工程中。</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">WXApi<span class="selector-class">.h</span></div><div class="line">WXApiObject<span class="selector-class">.h</span></div><div class="line">WechatAuthSDK<span class="selector-class">.h</span></div><div class="line">libWeChatSDK.a</div></pre></td></tr></table></figure>
-<p>##支付宝<br>网址:<a href="https://docs.open.alipay.com/54/104509/" target="_blank" rel="external">https://docs.open.alipay.com/54/104509/</a></p>
-<ul>
-<li>启动IDE（如Xcode），把iOS包中的压缩文件中以下文件拷贝到项目文件夹下，并导入到项目工程中。</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">AlipaySDK</span><span class="selector-class">.bundle</span></div><div class="line"><span class="selector-tag">AlipaySDK</span><span class="selector-class">.framework</span></div></pre></td></tr></table></figure>
-<ul>
-<li>增加以下依赖：<br><img src="../img/zhifubaozhifu.jpg" alt=""></li>
-</ul>
-<p>##银联支付<br>网址:<a href="https://open.unionpay.com/ajweb/help/file/techFile?productId=3" target="_blank" rel="external">https://open.unionpay.com/ajweb/help/file/techFile?productId=3</a></p>
-<ul>
-<li>启动IDE（如Xcode），把iOS包中的压缩文件中(paymentcontrol)以下文件拷贝到项目文件夹下，并导入到项目工程中。</li>
-<li>使用UPPaymentControl需要将paymentcontrol/inc目录下UPPaymentControl.h文件和paymentcontrol/libs目录下的libPaymentControl.a文件添加到商户应用的工程中</li>
-<li>添加依赖</li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CFNetwork<span class="selector-class">.framework</span></div><div class="line">ＳystemConfiguration<span class="selector-class">.framework</span></div><div class="line">libz</div><div class="line">libPaymentControl.a</div></pre></td></tr></table></figure>
-<p><img src="../img/yinlianzhifu.png" alt=""></p>
-<ul>
-<li><p>在工程info.plist设置中添加一个URL Types回调协议(在UPPayDemo工程中使用“UPPayDemo”作为协议)，用于在支付完成后返回商户客户端。请注意URL Schemes需要是唯一的(即开发者平台申请的唯一标示)。<br><img src="../img/yinlianzhifu1.png" alt=""></p>
-</li>
-<li><p>添加协议白名单<br>在Xcode7.0之后的版本中进行开发，需要在工程对应的plist文件中，添加LSApplicationQueriesSchemes  Array并加入uppaysdk、uppaywallet、uppayx1、uppayx2、uppayx3五个item，具体设置可参考以下截图：<br><img src="../img/yinlianzhifu2.png" alt=""></p>
-</li>
-<li><p>调用插件</p>
-<p>在需要调用支付控件接口的代码文件内引用头文件UPPaymentControl.h。<br>（注意：如果工程的compile source as 选项的值不是Objective–C++，则引用此头文件的文件类型都要改为.mm）</p>
-</li>
-</ul>
-<p>##OncePay的调用</p>
-<ul>
-<li>支付宝支付</li>
-</ul>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//支付宝</span></div><div class="line"><span class="built_in">NSString</span> *orderMessage = <span class="string">@""</span>;</div><div class="line">[[OncePayManager shareManager] OncePayWithOrderParameter:orderMessage callBack:^(<span class="built_in">NSString</span> *errStr) &#123;</div><div class="line">	<span class="built_in">NSLog</span>(<span class="string">@"errStr = %@"</span>,errStr);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
-<ul>
-<li>微信支付</li>
-</ul>
-<figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//微信</div><div class="line">PayReq* <span class="attr">req</span>             = [[PayReq alloc] init];</div><div class="line">req.<span class="attr">partnerId</span> = @<span class="string">"11"</span>;</div><div class="line">req.<span class="attr">prepayId=</span> @<span class="string">"22"</span>;</div><div class="line">req.<span class="attr">package</span> = @<span class="string">"Sign=WXPay"</span>;</div><div class="line">req.<span class="attr">nonceStr=</span> @<span class="string">"33"</span>;</div><div class="line">req.<span class="attr">timeStamp=</span> @<span class="string">"44"</span>.intValue;</div><div class="line">req.<span class="attr">sign=</span> @<span class="string">"55"</span>;</div><div class="line">[[OncePayManager shareManager] OncePayWithOrderParameter:req callBack:^(NSString *errStr) &#123;</div><div class="line">	NSLog(@<span class="string">"errStr = %@"</span>,errStr);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
-<ul>
-<li>银联支付</li>
-</ul>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//银联</span></div><div class="line">[[OncePayManager shareManager] OncePayWithunionpayParameter:<span class="string">@"sss"</span> payvc:<span class="keyword">self</span> callBack:^(<span class="built_in">NSString</span> *errStr, <span class="built_in">NSString</span> *data) &#123;</div><div class="line">	<span class="built_in">NSLog</span>(<span class="string">@"errStr = %@=%@"</span>,errStr, data);</div><div class="line">&#125;];</div></pre></td></tr></table></figure>
-<p>地址:<a href="https://github.com/once00/OncePay" target="_blank" rel="external">OncePay</a></p>
-
+        <p>##公共<br>不管是微信支付还是支付宝支付,前提条件都是Xcode中<code>TARGETS</code>中选择<code>info</code>中的    <code>URL scheme</code>中配置相关url(注意:支付宝随便填写,只要不跟别人APP名称重复就行,微信必须使用微信开发者平台的appid 如:wx<strong><strong><strong>*</strong></strong></strong>)<br>
+        
+          <a class="article-more-a" href="/2018/01/30/APP支付解决方案/#more">more >></a>
+        
       
 
       
