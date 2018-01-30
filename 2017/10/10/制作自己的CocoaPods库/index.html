@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="http://once00.github.io">
   <title>制作自己的CocoaPods库 | Once的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="准备工作1.你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。   2.接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
+  <meta name="description" content="准备工作1. 你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。  2. 接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
 <meta name="keywords" content="CocoaPods">
 <meta property="og:type" content="article">
 <meta property="og:title" content="制作自己的CocoaPods库">
 <meta property="og:url" content="http://once00.github.io/2017/10/10/制作自己的CocoaPods库/index.html">
 <meta property="og:site_name" content="Once的博客">
-<meta property="og:description" content="准备工作1.你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。   2.接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
-<meta property="og:image" content="http://once00.github.io/2017/10/10/img/1.png">
+<meta property="og:description" content="准备工作1. 你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。  2. 接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
+<meta property="og:image" content="http://once00.github.io/2017/10/10/img/1.jpeg">
 <meta property="og:image" content="http://once00.github.io/2017/10/10/img/2.png">
-<meta property="og:updated_time" content="2017-10-11T10:01:16.000Z">
+<meta property="og:updated_time" content="2018-01-30T10:04:18.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="制作自己的CocoaPods库">
-<meta name="twitter:description" content="准备工作1.你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。   2.接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
-<meta name="twitter:image" content="http://once00.github.io/2017/10/10/img/1.png">
+<meta name="twitter:description" content="准备工作1. 你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。  2. 接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
+<meta name="twitter:image" content="http://once00.github.io/2017/10/10/img/1.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="Once的博客" type="application/atom+xml">
   
@@ -200,11 +200,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p><strong>1.</strong>你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。</p>
-<p><img src="../img/1.png" width="50%" height="50%"> </p>
-<p><strong>2.</strong>接下来我们clone 到本地：<br><code>git clone  https://github.com/once00/OnceTest</code></p>
+        <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><p><strong>1.</strong> 你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。</p>
+<p><img src="../img/1.jpeg" alt=""></p>
+<p><strong>2.</strong> 接下来我们clone 到本地：<br><code>git clone  https://github.com/once00/OnceTest</code></p>
 <a id="more"></a>
-<p><strong>3.</strong>进入到OnceTest目录下你会看到LICENSE和README.md文件。我们在当前目录下现在建立一个为OnceTestDemo的工程，并添加继承NSObject的类OnceTestManager,方便测试我们添加了一个doSomething方法</p>
+<p><strong>3.</strong> 进入到OnceTest目录下你会看到LICENSE和README.md文件。我们在当前目录下现在建立一个为OnceTestDemo的工程，并添加继承NSObject的类OnceTestManager,方便测试我们添加了一个doSomething方法</p>
 <pre><code>#import @interface OnceTestManager : NSObject
 - (void)doSomething;
 @end
@@ -214,8 +214,8 @@
         NSLog(@&quot;doSomething&quot;);
 }
 @end
-</code></pre><p><strong>4.</strong>在OnceTest目录下我们添加OnceTest目录,在OnceTest目录下添加Classes和Assets目录来存放相关类和相关图片资源（假如我们当前库需要一张图片）</p>
-<p><strong>5.</strong>,返回到OnceTest跟目录,制作OnceTest.podspec文件<br><code>pod spec create OnceTest</code></p>
+</code></pre><p><strong>4.</strong> 在OnceTest目录下我们添加OnceTest目录,在OnceTest目录下添加Classes和Assets目录来存放相关类和相关图片资源（假如我们当前库需要一张图片）</p>
+<p><strong>5.</strong> ,返回到OnceTest跟目录,制作OnceTest.podspec文件<br><code>pod spec create OnceTest</code></p>
 <h4 id="OnceTest-podspec包括内容"><a href="#OnceTest-podspec包括内容" class="headerlink" title="OnceTest.podspec包括内容"></a>OnceTest.podspec包括内容</h4><pre><code>Pod::Spec.new do |s|
   s.name         = &apos;OnceKit&apos;
   s.summary      = &apos;一个集成常用扩展的类库&apos;
@@ -245,22 +245,22 @@
   #s.dependency &apos;MBProgressHUD&apos;, &apos;~&gt; 1.0.0&apos;
 
 end
-</code></pre><h4 id="创建trunk账号"><a href="#创建trunk账号" class="headerlink" title="创建trunk账号"></a>创建trunk账号</h4><p><strong>1.</strong>检测本机是否有trunk账号</p>
+</code></pre><h4 id="创建trunk账号"><a href="#创建trunk账号" class="headerlink" title="创建trunk账号"></a>创建trunk账号</h4><p><strong>1.</strong> 检测本机是否有trunk账号</p>
 <p><code>pod trunk me</code></p>
-<p><strong>2.</strong>注册trunk账号</p>
+<p><strong>2.</strong> 注册trunk账号</p>
 <p><code>pod trunk register *youremail*@gmail.com &#39;*yourname*&#39; --description=&#39;say something&#39; --verbose</code></p>
-<p><strong>3.</strong>对应邮箱会有邮件,点击确认就可以</p>
-<h4 id="准备推送"><a href="#准备推送" class="headerlink" title="准备推送"></a>准备推送</h4><p><strong>1.</strong>验证.podspec文件是否合法<br><code>pod spec lint OnceTest.podspec --allow-warnings</code></p>
-<p><strong>2.</strong>提交代码到github并打上标签(回到git目录)</p>
+<p><strong>3.</strong> 对应邮箱会有邮件,点击确认就可以</p>
+<h4 id="准备推送"><a href="#准备推送" class="headerlink" title="准备推送"></a>准备推送</h4><p><strong>1.</strong> 验证.podspec文件是否合法<br><code>pod spec lint OnceTest.podspec --allow-warnings</code></p>
+<p><strong>2.</strong> 提交代码到github并打上标签(回到git目录)</p>
 <pre><code>git add -A &amp;&amp; git commit -m &quot;创建版本 1.0.1.&quot;
 git tag &apos;1.0.1&apos; 
 git push --tags
 git push origin master
-</code></pre><p><strong>3.</strong>通过trunk推送podspec文件<br><code>pod trunk push OnceKit.podspec --allow-warnings</code></p>
+</code></pre><p><strong>3.</strong> 通过trunk推送podspec文件<br><code>pod trunk push OnceKit.podspec --allow-warnings</code></p>
 <p>成功会显示<br><img src="../img/2.png" width="50%" height="50%"></p>
-<p><strong>4.</strong>更新CocoaPods库</p>
+<p><strong>4.</strong> 更新CocoaPods库</p>
 <p><code>pod setup</code></p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p><strong>1.</strong>pod search无法搜索到类库的解决办法</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p><strong>1.</strong> pod search无法搜索到类库的解决办法</p>
 <ul>
 <li>删除~/Library/Caches/CocoaPods目录下的search_index.json文件</li>
 <li>删除成功后再执行pod search</li>
