@@ -17,7 +17,7 @@
 <meta property="og:description" content="准备工作1. 你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。  2. 接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
 <meta property="og:image" content="http://once00.github.io/2017/10/10/img/1.jpeg">
 <meta property="og:image" content="http://once00.github.io/2017/10/10/img/2.png">
-<meta property="og:updated_time" content="2018-01-30T10:04:18.966Z">
+<meta property="og:updated_time" content="2018-01-31T03:55:58.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="制作自己的CocoaPods库">
 <meta name="twitter:description" content="准备工作1. 你知道的cocoapods是托管在github上,所以第一步就是打开你的github,创造一个仓库。  2. 接下来我们clone 到本地：git clone  https://github.com/once00/OnceTest">
@@ -272,6 +272,21 @@ git push origin master
 <p><code>pod spec lint OnceKit.podspec --allow-warnings</code></p>
 <p><code>pod trunk push OnceKit.podspec --allow-warnings</code></p>
 <p><code>pod setup</code></p>
+<h2 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h2><ol>
+<li>引用静态库：“(.ios).library”。去掉头尾的lib，用“,”分割 。注意： (.ios)括号括起来代表可以省略<br><code>// 引用libxml2.lib和libz.lib.</code><br><code>spec.libraries = &#39;xml2&#39;, &#39;z&#39;</code></li>
+<li>引用公有framework：”(.ios).framework” 用”,”分割. 去掉尾部的”.framework”<br><code>spec.frameworks = &#39;UIKit&#39;,&#39;SystemConfiguration&#39;, &#39;Accelerate&#39;</code></li>
+<li>引用自己生成的framework：’(.ios).vendored_frameworks’  用”,”分割 路径写从.podspec所在目录为根目录的相对路径 ps:这个不要省略.framework spec.ios.vendored_frameworks = ‘Pod/Assets/*.framework’</li>
+<li>引用自己生成的.a文件, 添加到Pod/Assets文件夹里. Demo的Example文件夹里也需要添加一下, 不然找不到<br>spec.ios.vendored_libraries = ‘Pod/Assets/*.a’</li>
+</ol>
+<ul>
+<li>注意：在提交到私有仓库的时候需要加上–use-libraries </li>
+</ul>
+<h4 id="source-files-写法及含义建议大家写第一种或者第二种"><a href="#source-files-写法及含义建议大家写第一种或者第二种" class="headerlink" title="source_files:写法及含义建议大家写第一种或者第二种"></a>source_files:写法及含义建议大家写第一种或者第二种</h4><figure class="highlight livescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"OnceTest/*</span></div><div class="line">"OnceTest<span class="regexp">/OnceTest/</span>*.&#123;h,m&#125;<span class="string">"</span></div><div class="line">"OnceTest<span class="comment">/**/</span>*.h<span class="string">"</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>*</code> 表示匹配所有文件</li>
+<li><code>*.{h,m}</code> 表示匹配所有以.h和.m结尾的文件</li>
+<li><code>**</code> 表示匹配所有子目录</li>
+</ul>
 
       
 
@@ -500,10 +515,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
               </li>
              
@@ -512,11 +523,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">sqlite</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,6 +536,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">sqlite</a>
               </li>
             
             <div class="clearfix"></div>
