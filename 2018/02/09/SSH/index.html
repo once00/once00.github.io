@@ -8,16 +8,18 @@
   <link rel="dns-prefetch" href="http://once00.github.io">
   <title>SSH | Once的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##常用命令:  上传文件到服务器上scp  -P  端口 本地文件  user@host:服务器目录 上传文件夹到服务器上scp  -P  端口 -r 本地文件  user@host:服务器目录 从服务器下载文件scp -P  端口  user@host:服务器上的文件  本地目录 从服务器下载文件夹scp -P  端口 -r  user@host:服务器上的文件  本地目录  ##常见问题:">
+  <meta name="description" content="##常用命令:  上传文件到服务器上 1scp  -P  端口 本地文件  user@host:服务器目录  上传文件夹到服务器上 1scp  -P  端口 -r 本地文件  user@host:服务器目录  从服务器下载文件 1scp -P  端口  user@host:服务器上的文件  本地目录  从服务器下载文件夹 1scp -P  端口 -r  user@host:服务器上的文件  本地">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH">
 <meta property="og:url" content="http://once00.github.io/2018/02/09/SSH/index.html">
 <meta property="og:site_name" content="Once的博客">
-<meta property="og:description" content="##常用命令:  上传文件到服务器上scp  -P  端口 本地文件  user@host:服务器目录 上传文件夹到服务器上scp  -P  端口 -r 本地文件  user@host:服务器目录 从服务器下载文件scp -P  端口  user@host:服务器上的文件  本地目录 从服务器下载文件夹scp -P  端口 -r  user@host:服务器上的文件  本地目录  ##常见问题:">
-<meta property="og:updated_time" content="2018-03-06T10:14:32.893Z">
+<meta property="og:description" content="##常用命令:  上传文件到服务器上 1scp  -P  端口 本地文件  user@host:服务器目录  上传文件夹到服务器上 1scp  -P  端口 -r 本地文件  user@host:服务器目录  从服务器下载文件 1scp -P  端口  user@host:服务器上的文件  本地目录  从服务器下载文件夹 1scp -P  端口 -r  user@host:服务器上的文件  本地">
+<meta property="og:image" content="http://once00.github.io/2018/02/09/img/ssh-big.png">
+<meta property="og:updated_time" content="2018-03-07T01:29:14.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH">
-<meta name="twitter:description" content="##常用命令:  上传文件到服务器上scp  -P  端口 本地文件  user@host:服务器目录 上传文件夹到服务器上scp  -P  端口 -r 本地文件  user@host:服务器目录 从服务器下载文件scp -P  端口  user@host:服务器上的文件  本地目录 从服务器下载文件夹scp -P  端口 -r  user@host:服务器上的文件  本地目录  ##常见问题:">
+<meta name="twitter:description" content="##常用命令:  上传文件到服务器上 1scp  -P  端口 本地文件  user@host:服务器目录  上传文件夹到服务器上 1scp  -P  端口 -r 本地文件  user@host:服务器目录  从服务器下载文件 1scp -P  端口  user@host:服务器上的文件  本地目录  从服务器下载文件夹 1scp -P  端口 -r  user@host:服务器上的文件  本地">
+<meta name="twitter:image" content="http://once00.github.io/2018/02/09/img/ssh-big.png">
   
     <link rel="alternative" href="/atom.xml" title="Once的博客" type="application/atom+xml">
   
@@ -173,20 +175,28 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##常用命令:</p>
+        <p><img src="../img/ssh-big.png" alt="MacDown Screenshot"></p>
+<p>##常用命令:</p>
 <ol>
-<li>上传文件到服务器上<br><code>scp  -P  端口 本地文件  user@host:服务器目录</code></li>
-<li>上传文件夹到服务器上<br><code>scp  -P  端口 -r 本地文件  user@host:服务器目录</code></li>
-<li>从服务器下载文件<br><code>scp -P  端口  user@host:服务器上的文件  本地目录</code></li>
-<li>从服务器下载文件夹<br><code>scp -P  端口 -r  user@host:服务器上的文件  本地目录</code></li>
+<li><p>上传文件到服务器上</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">scp</span>  -P  端口 本地文件  user<span class="variable">@host</span>:服务器目录</div></pre></td></tr></table></figure>
+</li>
+<li><p>上传文件夹到服务器上</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">scp</span>  -P  端口 -r 本地文件  user<span class="variable">@host</span>:服务器目录</div></pre></td></tr></table></figure>
+</li>
+<li><p>从服务器下载文件</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">scp</span> -P  端口  user<span class="variable">@host</span>:服务器上的文件  本地目录</div></pre></td></tr></table></figure>
+</li>
+<li><p>从服务器下载文件夹</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">scp</span> -P  端口 -r  user<span class="variable">@host</span>:服务器上的文件  本地目录</div></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>##常见问题:</p>
 <ul>
 <li><p>linux 远程连接ssh提示IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY解决</p>
-<p>  解决办法: <code>rm -rf ~/.ssh/known_hosts</code></p>
-</li>
-<li><p>ssh连接服务器，空闲时间自动断开连接</p>
-<p>  解决办法: <code>/etc/ssh/</code><br>  编辑 <code>sudo vim ssh_config</code></p>
+<p>  解决办法: </p>
+  <figure class="highlight plain"><figcaption><span>-rf ~/.ssh/known_hosts```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* ssh连接服务器，空闲时间自动断开连接</div><div class="line"></div><div class="line">	解决办法: ```/etc/ssh/</div></pre></td></tr></table></figure>
+<p>  编辑 <code>sudo vim ssh_config</code></p>
 </li>
 </ul>
 
@@ -392,15 +402,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -412,11 +422,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>
