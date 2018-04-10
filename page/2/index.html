@@ -151,6 +151,89 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MAC系统下更改host文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/27/MAC系统下更改host文件/">MAC系统下更改host文件</a>
+    </h1>
+  
+
+        
+        <a href="/2015/07/27/MAC系统下更改host文件/" class="archive-article-date">
+  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-终端更改"><a href="#1-终端更改" class="headerlink" title="1.终端更改"></a>1.终端更改</h2><ul>
+<li><p>1.在应用程序里面打开终端(terminal)</p>
+</li>
+<li><p>2.输入sudo vi /etc/hosts</p>
+</li>
+<li><p>3.提示输入系统密码(输入密码是默认隐藏的，直接输入回车)hosts文件    就自动打开了(有时候打不开,在敲次回车)</p>
+</li>
+<li><p>4.打开此网站生成host文件:</p>
+<p>  <a href="http://serve.netsh.org/pub/gethosts.php" target="_blank" rel="external">http://serve.netsh.org/pub/gethosts.php</a></p>
+</li>
+</ul>
+<ul>
+<li><p>5.接着输入 i 进入编辑模式将添加的网站,ip拷贝进去</p>
+</li>
+<li><p>6.编辑完成之后,按esc,输入 : wq</p>
+</li>
+</ul>
+<h2 id="2-直接修改本地文件"><a href="#2-直接修改本地文件" class="headerlink" title="2.直接修改本地文件"></a>2.直接修改本地文件</h2><ul>
+<li>1.打开finder ,在前往里面选择前往文件夹(快捷键shift+comman+g)     在弹出框里输入 /private/etc
+        
+          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-简单制作 OS X Yosemite 10.10 正式版U盘USB启动安装盘方法教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -681,87 +764,6 @@ Too many arguments to function call, expected 0, have *
 
 
   
-    <article id="post-hexo搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/16/hexo搭建/">hexo搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2015/01/16/hexo搭建/" class="archive-article-date">
-  	<time datetime="2015-01-16T06:13:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-01-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一-安装Hexo"><a href="#一-安装Hexo" class="headerlink" title="一.安装Hexo"></a>一.安装Hexo</h2><p>打开终端</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo</span></div></pre></td></tr></table></figure>
-<h2 id="二-部署Hexo"><a href="#二-部署Hexo" class="headerlink" title="二.部署Hexo"></a>二.部署Hexo</h2><p>在电脑任意位置新建文件夹利用终端进入此文件夹.执行此命令(Hexo随后会自动在目标文件夹建立网站所需要的所有文件).</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> hexo init</span></div></pre></td></tr></table></figure>
-<p>必须执行此命令才可被保存</p>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo <span class="keyword">generate</span></div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2015/01/16/hexo搭建/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/01/16/hexo搭建/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -855,10 +857,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
               </li>
              
@@ -867,7 +865,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -876,10 +882,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>

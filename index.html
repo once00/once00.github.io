@@ -151,6 +151,71 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-OnceLayout布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/10/OnceLayout布局/">OnceLayout布局</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/10/OnceLayout布局/" class="archive-article-date">
+  	<time datetime="2018-04-10T10:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/img/AutoLayout.png" alt=""> </p>
+<p>##介绍<br>告别繁重的代码,只需简单的几行就完成布局.</p>
+<p>##使用<br><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">UIView * view_one=[[UIView alloc]init]<span class="comment">;</span></div><div class="line">    view_one.<span class="keyword">backgroundColor=[UIColor </span>redColor]<span class="comment">;</span></div><div class="line">    [self.view <span class="keyword">addSubview:view_one];</span></div><div class="line">    view_one.width=<span class="number">50</span><span class="comment">;</span></div><div class="line">    view_one.height=<span class="number">50</span><span class="comment">;</span></div><div class="line">    view_one.once_rightToView(self.view, <span class="number">10</span>)<span class="comment">;</span></div><div class="line">    view_one.once_topToView(self.view, <span class="number">20</span>)<span class="comment">;</span></div><div class="line">    </div><div class="line">    </div><div class="line">    UIView * view_two=[[UIView alloc]init]<span class="comment">;</span></div><div class="line">    view_two.<span class="keyword">backgroundColor=[UIColor </span>purpleColor]<span class="comment">;</span></div><div class="line">    [self.view <span class="keyword">addSubview:view_two];</span></div><div class="line">    view_two.width=<span class="number">200</span><span class="comment">;</span></div><div class="line">    view_two.height=<span class="number">200</span><span class="comment">;</span></div><div class="line">    view_two.once_rightToView(self.view, <span class="number">100</span>)<span class="comment">;</span></div><div class="line">    view_two.once_topToView(self.view, <span class="number">200</span>)<span class="comment">;</span></div><div class="line">    </div><div class="line">    </div><div class="line">    UIView * view_three=[[UIView alloc]init]<span class="comment">;</span></div><div class="line">    view_three.<span class="keyword">backgroundColor=[UIColor </span>greenColor]<span class="comment">;</span></div><div class="line">    [view_two <span class="keyword">addSubview:view_three];</span></div><div class="line">    view_three.width=<span class="number">80</span><span class="comment">;</span></div><div class="line">    view_three.height=<span class="number">80</span><span class="comment">;</span></div><div class="line">    view_three.once_leftToView(view_two, <span class="number">20</span>)<span class="comment">;</span></div><div class="line">    view_three.once_topToView(view_two, <span class="number">30</span>)<span class="comment">;</span></div><div class="line">    </div><div class="line">    UIView * view_four=[[UIView alloc]init]<span class="comment">;</span></div><div class="line">    view_four.<span class="keyword">backgroundColor=[UIColor </span>greenColor]<span class="comment">;</span></div><div class="line">    [self.view <span class="keyword">addSubview:view_four];</span></div><div class="line">    view_four.width=<span class="number">80</span><span class="comment">;</span></div><div class="line">    view_four.height=<span class="number">80</span><span class="comment">;</span></div><div class="line">    view_four.once_leftToView(view_two, <span class="number">20</span>)<span class="comment">;</span></div><div class="line">    view_four.once_topToView(view_two, <span class="number">30</span>)<span class="comment">;</span></div><div class="line">    </div><div class="line">    </div><div class="line">    UIView * view_five=[[UIView alloc]init]<span class="comment">;</span></div><div class="line">    view_five.<span class="keyword">backgroundColor=[UIColor </span>greenColor]<span class="comment">;</span></div><div class="line">    [self.view <span class="keyword">addSubview:view_five];</span></div><div class="line">    view_five.width=<span class="number">80</span><span class="comment">;</span></div><div class="line">    view_five.height=<span class="number">80</span><span class="comment">;</span></div><div class="line">    view_five.once_topToView(view_two, <span class="number">20</span>)<span class="comment">;</span></div><div class="line">    view_five.once_rightToView(self.view, <span class="number">30</span>)<span class="comment">;</span></div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/10/OnceLayout布局/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-SSH" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -686,89 +751,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-MAC系统下更改host文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/27/MAC系统下更改host文件/">MAC系统下更改host文件</a>
-    </h1>
-  
-
-        
-        <a href="/2015/07/27/MAC系统下更改host文件/" class="archive-article-date">
-  	<time datetime="2015-07-27T12:08:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2015-07-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-终端更改"><a href="#1-终端更改" class="headerlink" title="1.终端更改"></a>1.终端更改</h2><ul>
-<li><p>1.在应用程序里面打开终端(terminal)</p>
-</li>
-<li><p>2.输入sudo vi /etc/hosts</p>
-</li>
-<li><p>3.提示输入系统密码(输入密码是默认隐藏的，直接输入回车)hosts文件    就自动打开了(有时候打不开,在敲次回车)</p>
-</li>
-<li><p>4.打开此网站生成host文件:</p>
-<p>  <a href="http://serve.netsh.org/pub/gethosts.php" target="_blank" rel="external">http://serve.netsh.org/pub/gethosts.php</a></p>
-</li>
-</ul>
-<ul>
-<li><p>5.接着输入 i 进入编辑模式将添加的网站,ip拷贝进去</p>
-</li>
-<li><p>6.编辑完成之后,按esc,输入 : wq</p>
-</li>
-</ul>
-<h2 id="2-直接修改本地文件"><a href="#2-直接修改本地文件" class="headerlink" title="2.直接修改本地文件"></a>2.直接修改本地文件</h2><ul>
-<li>1.打开finder ,在前往里面选择前往文件夹(快捷键shift+comman+g)     在弹出框里输入 /private/etc
-        
-          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/07/27/MAC系统下更改host文件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -862,10 +844,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">objective-c</a>
               </li>
              
@@ -874,7 +852,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">thinkphp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -883,10 +869,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CocoaPods</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
             
             <div class="clearfix"></div>
