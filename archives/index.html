@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697081250102">
+  <link rel="stylesheet" href="/css/style.css?v=1697086604579">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -182,46 +182,13 @@
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月12日</a>
-            <a><i class="nexmoefont icon-areachart"></i>216 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>222 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
-                <h4 id="1-添加UIscrollview到self-view上，并设置约束等于父视图，设置宽度。"><a href="#1-添加UIscrollview到self-view上，并设置约束等于父视图，设置宽度。" class="headerlink" title="1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。"></a>1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。</h4><pre><code>    self.scrollView = [UIScrollView new];
-    self.scrollView.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:self.scrollView];
-    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
-        make.top.equalTo(self.view).offset(100);
-        make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.view);
-    &#125;];
-</code></pre>
-<h4 id="2-使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。"><a href="#2-使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。" class="headerlink" title="2.使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。"></a>2.使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。</h4><pre><code>self.contentView = [UIView new];
-[self.scrollView addSubview:self.contentView];
-[self.contentView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
-    make.edges.equalTo(self.scrollView);
-    make.width.equalTo(self.scrollView);
-&#125;];
-</code></pre>
-<pre><code>[self.contentView addSubview:self.labTitle01];
-[self.contentView addSubview:self.labTitle02];
-[self.labTitle01 mas_makeConstraints:^(MASConstraintMaker *make) &#123;
-    make.top.equalTo(self.contentView.mas_top).offset(10);
-    make.width.mas_equalTo(kScreenWidth-20);
-    make.centerX.equalTo(self.contentView);
-&#125;];
-[self.labTitle02 mas_makeConstraints:^(MASConstraintMaker *make) &#123;
-    make.top.equalTo(self.labTitle01.mas_bottom).offset(10);
-    make.width.mas_equalTo(kScreenWidth-20);
-    make.centerX.equalTo(self.contentView);
-&#125;];
-</code></pre>
-<h4 id="3-设置布局的最底部的视图，容器视图的bottom等于最后一个视图的bottom"><a href="#3-设置布局的最底部的视图，容器视图的bottom等于最后一个视图的bottom" class="headerlink" title="3.设置布局的最底部的视图，容器视图的bottom等于最后一个视图的bottom"></a>3.设置布局的最底部的视图，容器视图的bottom等于最后一个视图的bottom</h4><pre><code>[self.contentView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
-    make.bottom.equalTo(self.labTitle03.mas_bottom).offset(30);
-&#125;];
-</code></pre>
-
+                <p>Masonr布局对UIScrollView的内容自适应<br>
             
         </article>
     </div>
@@ -1154,7 +1121,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697081250102"></script>
+<script src="/js/app.js?v=1697086604580"></script>
 
 <script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -1171,6 +1138,8 @@
 
 
 <!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
 <script src="https://unpkg.com/clipboard@2.0.8/dist/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1182,8 +1151,6 @@
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="/js/clock.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 

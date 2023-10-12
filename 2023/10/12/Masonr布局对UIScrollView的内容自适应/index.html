@@ -16,15 +16,15 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/icon.jpg" type="image/png" />
-  <meta name="description" content="1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。    self.scrollView &#x3D; [UIScrollView new];     self.scrollView.backgroundColor &#x3D; [UIColor grayColor];     [self.view addSubview:self.scrollView];     [self.s">
+  <meta name="description" content="Masonr布局对UIScrollView的内容自适应">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Masonr布局对UIScrollView的内容自适应">
 <meta property="og:url" content="http://once00.github.io/2023/10/12/Masonr%E5%B8%83%E5%B1%80%E5%AF%B9UIScrollView%E7%9A%84%E5%86%85%E5%AE%B9%E8%87%AA%E9%80%82%E5%BA%94/index.html">
 <meta property="og:site_name" content="Once">
-<meta property="og:description" content="1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。    self.scrollView &#x3D; [UIScrollView new];     self.scrollView.backgroundColor &#x3D; [UIColor grayColor];     [self.view addSubview:self.scrollView];     [self.s">
+<meta property="og:description" content="Masonr布局对UIScrollView的内容自适应">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-10-12T02:59:04.000Z">
-<meta property="article:modified_time" content="2023-10-12T03:21:17.920Z">
+<meta property="article:modified_time" content="2023-10-12T04:56:39.706Z">
 <meta property="article:author" content="Once">
 <meta property="article:tag" content="objective-c">
 <meta name="twitter:card" content="summary">
@@ -36,7 +36,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697081250087">
+  <link rel="stylesheet" href="/css/style.css?v=1697086604566">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -184,7 +184,7 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
     <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月12日</a>
-    <a><i class="nexmoefont icon-areachart"></i>216 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>222 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
 </div>
 
@@ -193,14 +193,14 @@
         </div>
 
         <article>
-            <h4 id="1-添加UIscrollview到self-view上，并设置约束等于父视图，设置宽度。"><a href="#1-添加UIscrollview到self-view上，并设置约束等于父视图，设置宽度。" class="headerlink" title="1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。"></a>1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。</h4><pre><code>    self.scrollView = [UIScrollView new];
-    self.scrollView.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:self.scrollView];
-    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
-        make.top.equalTo(self.view).offset(100);
-        make.left.right.equalTo(self.view);
-        make.bottom.equalTo(self.view);
-    &#125;];
+            <p>Masonr布局对UIScrollView的内容自适应<br> <span id="more"></span></p>
+<h4 id="1-添加UIscrollview到self-view上，并设置约束等于父视图，设置宽度。"><a href="#1-添加UIscrollview到self-view上，并设置约束等于父视图，设置宽度。" class="headerlink" title="1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。"></a>1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。</h4><pre><code class="self.scrollView">self.scrollView.backgroundColor = [UIColor grayColor];
+[self.view addSubview:self.scrollView];
+[self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.top.equalTo(self.view).offset(100);
+    make.left.right.equalTo(self.view);
+    make.bottom.equalTo(self.view);
+&#125;];
 </code></pre>
 <h4 id="2-使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。"><a href="#2-使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。" class="headerlink" title="2.使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。"></a>2.使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。</h4><pre><code>self.contentView = [UIView new];
 [self.scrollView addSubview:self.contentView];
@@ -981,7 +981,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697081250088"></script>
+<script src="/js/app.js?v=1697086604566"></script>
 
 <script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
@@ -998,6 +998,8 @@
 
 
 <!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
 <script src="https://unpkg.com/clipboard@2.0.8/dist/clipboard.min.js"></script>
 
 <script src="/lib/codeBlock/codeBlockFuction.js"></script>
@@ -1009,8 +1011,6 @@
 <script src="/lib/codeBlock/codeShrink.js"></script>
 
 <link rel="stylesheet" href="/lib/codeBlock/matery.css">
-
-<script src="/js/clock.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
