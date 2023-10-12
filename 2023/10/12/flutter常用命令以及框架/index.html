@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>Tags：hexo - Once</title>
+  <title>flutter常用命令以及框架 - Once</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,12 +16,17 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/icon.jpg" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Once">
-<meta property="og:url" content="http://once00.github.io/tags/hexo/index.html">
+  <meta name="description" content="flutter常用命令以及框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="flutter常用命令以及框架">
+<meta property="og:url" content="http://once00.github.io/2023/10/12/flutter%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E6%A1%86%E6%9E%B6/index.html">
 <meta property="og:site_name" content="Once">
+<meta property="og:description" content="flutter常用命令以及框架">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-12T05:21:34.000Z">
+<meta property="article:modified_time" content="2023-10-12T06:00:10.056Z">
 <meta property="article:author" content="Once">
+<meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.15.8/styles/atom-one-dark.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
@@ -31,7 +36,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697090425965">
+  <link rel="stylesheet" href="/css/style.css?v=1697090425941">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -168,32 +173,87 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2015/01/16/hexo%E6%90%AD%E5%BB%BA/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="hexo搭建" class="lazyload">
-                    <h1>hexo搭建</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2015年01月16日</a>
-            <a><i class="nexmoefont icon-areachart"></i>379 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="flutter常用命令以及框架" class="lazyload">
+            <h1>flutter常用命令以及框架</h1>
         </div>
-        
-        <article>
-            
-                <p>hexo搭建<br>
-            
-        </article>
-    </div>
     
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月12日</a>
+    <a><i class="nexmoefont icon-areachart"></i>263 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
+            
+        </div>
+
+        <article>
+            <p>flutter常用命令以及框架<br> <span id="more"></span></p>
+<h2 id="一-常用命令"><a href="#一-常用命令" class="headerlink" title="一.常用命令"></a>一.常用命令</h2><ul>
+<li>打包命令<br> 1.打Release包：</li>
+</ul>
+<pre><code>flutter build apk --release
+flutter build ios --release
+</code></pre>
+<p> 2.打Debug包：</p>
+<pre><code>flutter build apk --debug
+flutter build ios --debug
+</code></pre>
+<h2 id="二-常用框架"><a href="#二-常用框架" class="headerlink" title="二.常用框架"></a>二.常用框架</h2><ul>
+<li>网站1：<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/">https://pub.flutter-io.cn</a></li>
+<li>网站2：<a target="_blank" rel="noopener" href="https://pub.dev/">https://pub.dev</a></li>
+<li>dart 2.12 之后需要处理空安全</li>
+<li>^ 表示 大版本不变，小版本使用最新的版本</li>
+<li>三方库冲突时使用 any ，执行 flutter pub get命令，然后在pubspec.lock替换版本号</li>
+<li>三方库未适配空安全，点击main.dart -&gt; Additional arguments 添加 –no-sound-null-safety</li>
+</ul>
+<p>1.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/get">getx(状态管理框架)</a><br>2.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/flutter_screenutil">flutter_screenutil(屏幕参数适配)</a><br>3.<a target="_blank" rel="noopener" href="https://pub-web.flutter-io.cn/packages/get_storage">get_storage(本地存储框架)</a><br>4.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/cached_network_image">cached_network_image(图片缓存框架)</a><br>5.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/dio">dio(网络请求框架)</a><br>6.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/webview_flutter">webview_flutter</a><br>7.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/wechat_assets_picker%0A">wechat_assets_picker(图片视频选择器(微信UI)</a><br>8.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/date_format%0A">date_format(时间格式转换) </a><br>9.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/wechat_camera_picker%0A">wechat_camera_picker(拍照与录像(微信UI)) </a><br>10.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/keyboard_actions%0A">keyboard_actions(处理键盘事件) </a><br>11.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/animate_do">animate_do(动画) </a><br>12.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/carousel_slider%0A">carousel_slider(轮播)</a><br>13.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/qr_code_scanner%0A">qr_code_scanner(二维码扫描(跳页面)) </a><br>14.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/pull_to_refresh%0A">pull_to_refresh(下拉刷新) </a><br>15.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/permission_handler%0A">permission_handler(手机权限) </a><br>16.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/fluttertoast">fluttertoast(弹框) </a><br>17.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/graphic%0A">graphic（EChart Flutter版） </a><br>18.<a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/qr_flutter">qr_flutter(二维码生成) </a></p>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>Once<br>
+    
+    <strong>Link：</strong><a href="http://once00.github.io/2023/10/12/flutter%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E6%A1%86%E6%9E%B6/" title="http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;flutter%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E6%A1%86%E6%9E%B6&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;flutter%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BB%A5%E5%8F%8A%E6%A1%86%E6%9E%B6&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/flutter/" rel="tag">flutter</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src="https://unpkg.com/leancloud-storage/dist/av-min.js"></script>
+<script src='https://unpkg.com/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '9yrYrjyBKgGtz3JbpS7VF41R-gzGzoHsz',
+        appKey: 'XKnWIH4FQjQSX5KDTBgSsOfh'
+    })
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -908,7 +968,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697090425966"></script>
+<script src="/js/app.js?v=1697090425942"></script>
 
 <script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
