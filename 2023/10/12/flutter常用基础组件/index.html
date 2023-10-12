@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>给博客绑定域名 - Once</title>
+  <title>flutter常用基础组件 - Once</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,19 +16,18 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/icon.jpg" type="image/png" />
-  <meta name="description" content="博客搭建好之后主要还是想有自己的网址">
+  <meta name="description" content="flutter常用基础组件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="给博客绑定域名">
-<meta property="og:url" content="http://once00.github.io/2015/01/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/index.html">
+<meta property="og:title" content="flutter常用基础组件">
+<meta property="og:url" content="http://once00.github.io/2023/10/12/flutter%E5%B8%B8%E7%94%A8%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Once">
-<meta property="og:description" content="博客搭建好之后主要还是想有自己的网址">
+<meta property="og:description" content="flutter常用基础组件">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/once00/once00.github.io/master/img/dz.png">
-<meta property="article:published_time" content="2015-01-16T09:59:17.000Z">
-<meta property="article:modified_time" content="2022-06-24T03:02:12.533Z">
+<meta property="article:published_time" content="2023-10-12T06:10:10.000Z">
+<meta property="article:modified_time" content="2023-10-12T06:34:08.103Z">
 <meta property="article:author" content="Once">
+<meta property="article:tag" content="flutter">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/once00/once00.github.io/master/img/dz.png">
   <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.15.8/styles/atom-one-dark.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
   <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
@@ -37,7 +36,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697092455604">
+  <link rel="stylesheet" href="/css/style.css?v=1697092455625">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -178,15 +177,15 @@
     
         <div class="nexmoe-post-cover"
              style="padding-bottom: 24.305555555555554%;">
-            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="给博客绑定域名" class="lazyload">
-            <h1>给博客绑定域名</h1>
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="flutter常用基础组件" class="lazyload">
+            <h1>flutter常用基础组件</h1>
         </div>
     
 
         <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2015年01月16日</a>
-    <a><i class="nexmoefont icon-areachart"></i>113 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月12日</a>
+    <a><i class="nexmoefont icon-areachart"></i>947 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
 </div>
 
         <div class="nexmoe-post-right">
@@ -194,15 +193,83 @@
         </div>
 
         <article>
-            <p>博客搭建好之后主要还是想有自己的网址</p>
- <span id="more"></span>
-
-<h2 id="具体配置如下"><a href="#具体配置如下" class="headerlink" title="具体配置如下"></a>具体配置如下</h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://raw.githubusercontent.com/once00/once00.github.io/master/img/dz.png" alt="我的图片" class="lazyload"></p>
+            <p>flutter常用基础组件<br> <span id="more"></span></p>
+<h4 id="1-Row"><a href="#1-Row" class="headerlink" title="1.Row"></a>1.Row</h4><p>Row 是一个可以沿水平方向展示它的子组件的组件。</p>
 <ul>
-<li>A类型的主要是填写自己博客IP地址(可在站长工具中查询自己的IP地址)</li>
-<li>CNAME记录主要填写自己的博客地址</li>
+<li>常用属性</li>
 </ul>
-<p>在自己<strong>soure</strong>新建一个CNAME文件,在里面填写自己的博客地址<br>如果想使用<a target="_blank" rel="noopener" href="http://www.zipperary.com形式,cname文件中相应地变为www.onceoo.com即可/">www.zipperary.com形式，CNAME文件中相应地变为www.onceoo.com即可</a></p>
+<pre><code>crossAxisAlignment：子组件沿着 Cross 轴（在 Row 中是纵轴）如何摆放，其实就是子组件对齐方式，可选值有：
+    CrossAxisAlignment.start：子组件在 Row 中顶部对齐。
+    CrossAxisAlignment.end：子组件在 Row 中底部对齐。
+    CrossAxisAlignment.center：子组件在 Row 中居中对齐。
+    CrossAxisAlignment.stretch：拉伸填充满父布局。
+    CrossAxisAlignment.baseline：在 Row 组件中会报错。
+
+mainAxisAlignment：子组件沿着 Main 轴（在 Row 中是横轴）如何摆放，其实就是子组件排列方式，可选值有：
+    MainAxisAlignment.start：靠左排列。
+    MainAxisAlignment.end：靠右排列。
+    MainAxisAlignment.center：居中排列。
+    MainAxisAlignment.spaceAround：每个子组件左右间隔相等，也就是 margin 相等。
+    MainAxisAlignment.spaceBetween：两端对齐，也就是第一个子组件靠左，最后一个子组件靠右，剩余组件在中间平均分散排列。
+    MainAxisAlignment.spaceEvenly：每个子组件平均分散排列，也就是宽度相等。
+
+mainAxisSize：Main 轴大小，可选值有：
+    MainAxisSize.max：相当于 Android 的 match_parent。
+    MainAxisSize.min：相当于 Android 的 wrap_content。
+
+textBaseline：不太理解。
+
+textDirection：子组件排列顺序，可选值有：
+    TextDirection.ltr：从左往右开始排列。
+    TextDirection.rtl：从右往左开始排列。
+verticalDirection：确定如何在垂直方向摆放子组件，以及如何解释 start 和 end，指定 height 可以看到效果，可选值有：
+    VerticalDirection.up：Row 从下至上开始摆放子组件，此时我们看到的底部其实是顶部。
+    VerticalDirection.down：Row 从上至下开始摆放子组件，此时我们看到的顶部就是顶部。
+</code></pre>
+<p>children：子组件，值是一个 Widget 数组。</p>
+<h4 id="2-Column"><a href="#2-Column" class="headerlink" title="2.Column"></a>2.Column</h4><p>Column 是一个可以沿垂直方向展示它的子组件的组件。</p>
+<ul>
+<li>常用属性</li>
+</ul>
+<pre><code>//子组件沿着 Cross 轴（在 Row 中是纵轴）如何摆放，其实就是子组件对齐方式，可选值有：
+//CrossAxisAlignment.start：子组件在 Row 中顶部对齐
+//CrossAxisAlignment.end：子组件在 Row 中底部对齐
+//CrossAxisAlignment.center：子组件在 Row 中居中对齐
+//CrossAxisAlignment.stretch：拉伸填充满父布局
+//CrossAxisAlignment.baseline：在 Row 组件中会报错
+crossAxisAlignment: CrossAxisAlignment.start,
+//子组件沿着 Main 轴（在 Row 中是横轴）如何摆放，其实就是子组件排列方式，可选值有：
+//MainAxisAlignment.start：靠左排列
+//MainAxisAlignment.end：靠右排列
+//MainAxisAlignment.center：居中排列
+//MainAxisAlignment.spaceAround：每个子组件左右间隔相等，也就是 margin 相等
+//MainAxisAlignment.spaceBetween：两端对齐，也就是第一个子组件靠左，最后一个子组件靠右，剩余组件在中间平均分散排列
+//MainAxisAlignment.spaceEvenly：每个子组件平均分散排列，也就是宽度相等
+mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//Main 轴大小，可选值有：
+//MainAxisSize.max：相当于 Android 的 match_parent
+//MainAxisSize.min：相当于 Android 的 wrap_content
+mainAxisSize: MainAxisSize.max,
+//不太理解
+//            textBaseline: TextBaseline.alphabetic,
+//子组件排列顺序，可选值有：
+//TextDirection.ltr：从左往右开始排列
+//TextDirection.rtl：从右往左开始排列
+textDirection: TextDirection.ltr,
+//确定如何在垂直方向摆放子组件，以及如何解释 start 和 end，指定 height 可以看到效果，可选值有：
+//VerticalDirection.up：Row 从下至上开始摆放子组件，此时我们看到的底部其实是顶部
+//VerticalDirection.down：Row 从上至下开始摆放子组件，此时我们看到的顶部就是顶部
+verticalDirection: VerticalDirection.down,
+</code></pre>
+<h4 id="3-Expanded"><a href="#3-Expanded" class="headerlink" title="3.Expanded"></a>3.Expanded</h4><p>会填充空间</p>
+<ul>
+<li>常用属性<br>flex 分配空间的弹性系数，Row，Column或Flex的每个Expanded的flex构成空间分配的比例，默认int flex &#x3D; 1</li>
+</ul>
+<h4 id="4-SizedBox"><a href="#4-SizedBox" class="headerlink" title="4.SizedBox"></a>4.SizedBox</h4><p>意思就是一个指定大小的盒子，SizedBox会强制设置它的孩子的宽度或者高度为指定值。</p>
+<h4 id="5-ElevatedButton"><a href="#5-ElevatedButton" class="headerlink" title="5.ElevatedButton"></a>5.ElevatedButton</h4><p>常用按钮</p>
+<h4 id="6-Stack、Positioned"><a href="#6-Stack、Positioned" class="headerlink" title="6.Stack、Positioned"></a>6.Stack、Positioned</h4><p>层叠布局，可以实现绝对定位布局</p>
+<h4 id="7-Container"><a href="#7-Container" class="headerlink" title="7.Container"></a>7.Container</h4><p>是一个组合类容器，</p>
+<h4 id="8-Clip"><a href="#8-Clip" class="headerlink" title="8.Clip"></a>8.Clip</h4><p>裁剪，设置圆角等</p>
 
         </article>
 
@@ -211,7 +278,7 @@
   <div class="nexmoe-post-copyright">
     <strong>Author：</strong>Once<br>
     
-    <strong>Link：</strong><a href="http://once00.github.io/2015/01/16/%E7%BB%99%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" title="http:&#x2F;&#x2F;once00.github.io&#x2F;2015&#x2F;01&#x2F;16&#x2F;%E7%BB%99%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;once00.github.io&#x2F;2015&#x2F;01&#x2F;16&#x2F;%E7%BB%99%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D&#x2F;</a><br>
+    <strong>Link：</strong><a href="http://once00.github.io/2023/10/12/flutter%E5%B8%B8%E7%94%A8%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6/" title="http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;flutter%E5%B8%B8%E7%94%A8%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;flutter%E5%B8%B8%E7%94%A8%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6&#x2F;</a><br>
 
     
       <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
@@ -223,6 +290,8 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow">
     
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/flutter/" rel="tag">flutter</a>
     
 </div>
 
@@ -956,7 +1025,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697092455604"></script>
+<script src="/js/app.js?v=1697092455625"></script>
 
 <script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
