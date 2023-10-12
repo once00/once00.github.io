@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>Tags：TLBB - Once</title>
+  <title>thinkPHP使用curl模拟请求接口 - Once</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,12 +16,17 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/icon.jpg" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Once">
-<meta property="og:url" content="http://once00.github.io/tags/TLBB/index.html">
+  <meta name="description" content="thinkPHP使用curl模拟请求接口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="thinkPHP使用curl模拟请求接口">
+<meta property="og:url" content="http://once00.github.io/2023/10/12/thinkPHP%E4%BD%BF%E7%94%A8curl%E6%A8%A1%E6%8B%9F%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="Once">
+<meta property="og:description" content="thinkPHP使用curl模拟请求接口">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-12T05:09:45.000Z">
+<meta property="article:modified_time" content="2023-10-12T05:16:28.685Z">
 <meta property="article:author" content="Once">
+<meta property="article:tag" content="thinkphp">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.15.8/styles/atom-one-dark.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
@@ -31,7 +36,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697087792243">
+  <link rel="stylesheet" href="/css/style.css?v=1697087792259">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -168,32 +173,103 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2021/03/11/%E6%89%8B%E5%B7%A5%E6%9E%B6%E8%AE%BE%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8E%AF%E5%A2%83-%E5%8D%95Linux%E7%8E%AF%E5%A2%83/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="手工架设服务器环境,单Linux环境" class="lazyload">
-                    <h1>手工架设服务器环境,单Linux环境</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2021年03月11日</a>
-            <a><i class="nexmoefont icon-areachart"></i>725 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="thinkPHP使用curl模拟请求接口" class="lazyload">
+            <h1>thinkPHP使用curl模拟请求接口</h1>
         </div>
-        
-        <article>
-            
-                <p>手工架设TLBB服务器环境,单Linux环境</p>
-            
-        </article>
-    </div>
     
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月12日</a>
+    <a><i class="nexmoefont icon-areachart"></i>265 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
+            
+        </div>
+
+        <article>
+            <p>thinkPHP使用curl模拟请求接口<br> <span id="more"></span></p>
+<h4 id="一-安装"><a href="#一-安装" class="headerlink" title="一.安装"></a>一.安装</h4><pre><code class="composer">
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://packagist.org/packages/curl/curl">curl&#x2F;curl地址：https://packagist.org/packages/curl/curl</a></p>
+<h4 id="二：使用curl实现get请求"><a href="#二：使用curl实现get请求" class="headerlink" title="二：使用curl实现get请求"></a>二：使用curl实现get请求</h4><p>1：get参数直接拼接在url上</p>
+<pre><code class="$curl">$curl-&gt;get(&#39;https://api.wj0511.com/v1/literary/detail?token=XXX&amp;id=374&#39;);
+$curl-&gt;close();
+</code></pre>
+<p>2:get参数通过第二个参数进行传递</p>
+<pre><code>$curl = new Curl();
+$curl-&gt;get(&#39;https://api.wj0511.com/v1/literary/detail&#39;,array(
+    &#39;token&#39; =&gt; &#39;XXX&#39;,
+    &#39;id&#39; =&gt; 374
+));
+$curl-&gt;close();
+</code></pre>
+<p>返回参数为：</p>
+<pre><code>$curl-&gt;error//是否错误
+$curl-&gt;error_code//错误编码
+$curl-&gt;response//返回数据
+</code></pre>
+<h4 id="三：使用curl实现post请求"><a href="#三：使用curl实现post请求" class="headerlink" title="三：使用curl实现post请求"></a>三：使用curl实现post请求</h4><pre><code>$params = array(
+    &#39;username&#39; =&gt; &#39;test&#39;,
+    &#39;password&#39; =&gt; &#39;test&#39;,
+);
+$curl = new Curl();
+$curl-&gt;post(&#39;https://api.wj0511.com/v1/login/login&#39;, $params);
+$curl-&gt;close();
+</code></pre>
+<p>返回参数同get请求相同</p>
+<h4 id="四：curl-curl拓展常见的一些方法："><a href="#四：curl-curl拓展常见的一些方法：" class="headerlink" title="四：curl&#x2F;curl拓展常见的一些方法："></a>四：curl&#x2F;curl拓展常见的一些方法：</h4><pre><code>$curl-&gt;setBasicAuthentication(&#39;username&#39;, &#39;password&#39;);//设置基本身份验证
+$curl-&gt;setHeader(&#39;X-Requested-With&#39;, &#39;XMLHttpRequest&#39;);//设置请求头信息
+$curl-&gt;setCookie(&#39;key&#39;, &#39;value&#39;);//设置cookie
+$curl-&gt;request_headers//获取请求头信息
+$curl-&gt;response_headers//获取响应头信息
+</code></pre>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>Once<br>
+    
+    <strong>Link：</strong><a href="http://once00.github.io/2023/10/12/thinkPHP%E4%BD%BF%E7%94%A8curl%E6%A8%A1%E6%8B%9F%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3/" title="http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;thinkPHP%E4%BD%BF%E7%94%A8curl%E6%A8%A1%E6%8B%9F%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;thinkPHP%E4%BD%BF%E7%94%A8curl%E6%A8%A1%E6%8B%9F%E8%AF%B7%E6%B1%82%E6%8E%A5%E5%8F%A3&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/thinkphp/" rel="tag">thinkphp</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src="https://unpkg.com/leancloud-storage/dist/av-min.js"></script>
+<script src='https://unpkg.com/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '9yrYrjyBKgGtz3JbpS7VF41R-gzGzoHsz',
+        appKey: 'XKnWIH4FQjQSX5KDTBgSsOfh'
+    })
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -908,7 +984,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697087792243"></script>
+<script src="/js/app.js?v=1697087792260"></script>
 
 <script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
