@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>Archive：2017/10 - Once</title>
+  <title>Archive：2023/10 - Once</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -18,7 +18,7 @@
   <link rel="shortcut icon" href="/images/head/icon.jpg" type="image/png" />
   <meta property="og:type" content="website">
 <meta property="og:title" content="Once">
-<meta property="og:url" content="http://once00.github.io/archives/2017/10/index.html">
+<meta property="og:url" content="http://once00.github.io/archives/2023/10/index.html">
 <meta property="og:site_name" content="Once">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Once">
@@ -31,7 +31,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697080055327">
+  <link rel="stylesheet" href="/css/style.css?v=1697080055334">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -171,24 +171,66 @@
         <section class="nexmoe-posts">
     
     <div class="nexmoe-post">
-        <a href="/2017/10/10/%E5%88%B6%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84CocoaPods%E5%BA%93/">
+        <a href="/2023/10/12/Masonr%E5%B8%83%E5%B1%80%E5%AF%B9UIScrollView%E7%9A%84%E5%86%85%E5%AE%B9%E8%87%AA%E9%80%82%E5%BA%94/">
             
                 <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="制作自己的CocoaPods库" class="lazyload">
-                    <h1>制作自己的CocoaPods库</h1>
+                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Masonr布局对UIScrollView的内容自适应" class="lazyload">
+                    <h1>Masonr布局对UIScrollView的内容自适应</h1>
                 </div>
             
         </a>
         
         <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2017年10月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>951 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+            <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月12日</a>
+            <a><i class="nexmoefont icon-areachart"></i>216 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
         </div>
         
         <article>
             
-                <p>制作自己的CocoaPods库<br>
+                <ul>
+<li>1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。</li>
+</ul>
+<pre><code>self.scrollView = [UIScrollView new];
+self.scrollView.backgroundColor = [UIColor grayColor];
+[self.view addSubview:self.scrollView];
+[self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.top.equalTo(self.view).offset(100);
+    make.left.right.equalTo(self.view);
+    make.bottom.equalTo(self.view);
+&#125;];
+</code></pre>
+<ul>
+<li>2.使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。</li>
+</ul>
+<pre><code>self.contentView = [UIView new];
+[self.scrollView addSubview:self.contentView];
+[self.contentView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.edges.equalTo(self.scrollView);
+    make.width.equalTo(self.scrollView);
+&#125;];
+</code></pre>
+<pre><code>[self.contentView addSubview:self.labTitle01];
+[self.contentView addSubview:self.labTitle02];
+[self.labTitle01 mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.top.equalTo(self.contentView.mas_top).offset(10);
+    make.width.mas_equalTo(kScreenWidth-20);
+    make.centerX.equalTo(self.contentView);
+&#125;];
+[self.labTitle02 mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.top.equalTo(self.labTitle01.mas_bottom).offset(10);
+    make.width.mas_equalTo(kScreenWidth-20);
+    make.centerX.equalTo(self.contentView);
+&#125;];
+</code></pre>
+<ul>
+<li>3.设置布局的最底部的视图，容器视图的bottom等于最后一个视图的bottom</li>
+</ul>
+<pre><code>[self.contentView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.bottom.equalTo(self.labTitle03.mas_bottom).offset(30);
+&#125;];
+</code></pre>
+
             
         </article>
     </div>
@@ -908,7 +950,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697080055328"></script>
+<script src="/js/app.js?v=1697080055335"></script>
 
 <script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>

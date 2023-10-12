@@ -5,7 +5,7 @@
 <head>
   
   <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
-  <title>Archive：2017/10 - Once</title>
+  <title>Masonr布局对UIScrollView的内容自适应 - Once</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -16,12 +16,17 @@
     <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
 
   <link rel="shortcut icon" href="/images/head/icon.jpg" type="image/png" />
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Once">
-<meta property="og:url" content="http://once00.github.io/archives/2017/10/index.html">
+  <meta name="description" content="1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。  self.scrollView &#x3D; [UIScrollView new]; self.scrollView.backgroundColor &#x3D; [UIColor grayColor]; [self.view addSubview:self.scrollView]; [self.scrollView mas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Masonr布局对UIScrollView的内容自适应">
+<meta property="og:url" content="http://once00.github.io/2023/10/12/Masonr%E5%B8%83%E5%B1%80%E5%AF%B9UIScrollView%E7%9A%84%E5%86%85%E5%AE%B9%E8%87%AA%E9%80%82%E5%BA%94/index.html">
 <meta property="og:site_name" content="Once">
+<meta property="og:description" content="1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。  self.scrollView &#x3D; [UIScrollView new]; self.scrollView.backgroundColor &#x3D; [UIColor grayColor]; [self.view addSubview:self.scrollView]; [self.scrollView mas">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-12T02:59:04.000Z">
+<meta property="article:modified_time" content="2023-10-12T03:06:58.179Z">
 <meta property="article:author" content="Once">
+<meta property="article:tag" content="objective-c">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.15.8/styles/atom-one-dark.css" crossorigin>
   <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
@@ -31,7 +36,7 @@
   
     <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
   
-  <link rel="stylesheet" href="/css/style.css?v=1697080055327">
+  <link rel="stylesheet" href="/css/style.css?v=1697080055307">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -168,32 +173,109 @@
   </div>
   <div id="nexmoe-content">
     <div class="nexmoe-primary">
-        <section class="nexmoe-posts">
+        <div class="nexmoe-post">
     
-    <div class="nexmoe-post">
-        <a href="/2017/10/10/%E5%88%B6%E4%BD%9C%E8%87%AA%E5%B7%B1%E7%9A%84CocoaPods%E5%BA%93/">
-            
-                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 24.305555555555554%;">
-                    <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="制作自己的CocoaPods库" class="lazyload">
-                    <h1>制作自己的CocoaPods库</h1>
-                </div>
-            
-        </a>
-        
-        <div class="nexmoe-post-meta nexmoe-rainbow">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2017年10月10日</a>
-            <a><i class="nexmoefont icon-areachart"></i>951 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="Masonr布局对UIScrollView的内容自适应" class="lazyload">
+            <h1>Masonr布局对UIScrollView的内容自适应</h1>
         </div>
-        
-        <article>
-            
-                <p>制作自己的CocoaPods库<br>
-            
-        </article>
-    </div>
     
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年10月12日</a>
+    <a><i class="nexmoefont icon-areachart"></i>216 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
+            
+        </div>
+
+        <article>
+            <ul>
+<li>1.添加UIscrollview到self.view上，并设置约束等于父视图，设置宽度。</li>
+</ul>
+<pre><code>self.scrollView = [UIScrollView new];
+self.scrollView.backgroundColor = [UIColor grayColor];
+[self.view addSubview:self.scrollView];
+[self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.top.equalTo(self.view).offset(100);
+    make.left.right.equalTo(self.view);
+    make.bottom.equalTo(self.view);
+&#125;];
+</code></pre>
+<ul>
+<li>2.使用容器视图添加到UIscrollview上，所有的子视图布局在这个容器视图上。</li>
+</ul>
+<pre><code>self.contentView = [UIView new];
+[self.scrollView addSubview:self.contentView];
+[self.contentView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.edges.equalTo(self.scrollView);
+    make.width.equalTo(self.scrollView);
+&#125;];
+</code></pre>
+<pre><code>[self.contentView addSubview:self.labTitle01];
+[self.contentView addSubview:self.labTitle02];
+[self.labTitle01 mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.top.equalTo(self.contentView.mas_top).offset(10);
+    make.width.mas_equalTo(kScreenWidth-20);
+    make.centerX.equalTo(self.contentView);
+&#125;];
+[self.labTitle02 mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.top.equalTo(self.labTitle01.mas_bottom).offset(10);
+    make.width.mas_equalTo(kScreenWidth-20);
+    make.centerX.equalTo(self.contentView);
+&#125;];
+</code></pre>
+<ul>
+<li>3.设置布局的最底部的视图，容器视图的bottom等于最后一个视图的bottom</li>
+</ul>
+<pre><code>[self.contentView mas_makeConstraints:^(MASConstraintMaker *make) &#123;
+    make.bottom.equalTo(self.labTitle03.mas_bottom).offset(30);
+&#125;];
+</code></pre>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>Once<br>
+    
+    <strong>Link：</strong><a href="http://once00.github.io/2023/10/12/Masonr%E5%B8%83%E5%B1%80%E5%AF%B9UIScrollView%E7%9A%84%E5%86%85%E5%AE%B9%E8%87%AA%E9%80%82%E5%BA%94/" title="http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;Masonr%E5%B8%83%E5%B1%80%E5%AF%B9UIScrollView%E7%9A%84%E5%86%85%E5%AE%B9%E8%87%AA%E9%80%82%E5%BA%94&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;10&#x2F;12&#x2F;Masonr%E5%B8%83%E5%B1%80%E5%AF%B9UIScrollView%E7%9A%84%E5%86%85%E5%AE%B9%E8%87%AA%E9%80%82%E5%BA%94&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/objective-c/" rel="tag">objective-c</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src="https://unpkg.com/leancloud-storage/dist/av-min.js"></script>
+<script src='https://unpkg.com/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '9yrYrjyBKgGtz3JbpS7VF41R-gzGzoHsz',
+        appKey: 'XKnWIH4FQjQSX5KDTBgSsOfh'
+    })
+</script>
 </section>
+    </div>
+</div>
 
 
         <div class="nexmoe-post-right">
@@ -908,7 +990,7 @@
 <script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
 
 
-<script src="/js/app.js?v=1697080055328"></script>
+<script src="/js/app.js?v=1697080055308"></script>
 
 <script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
