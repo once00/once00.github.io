@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  
+  <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+  <title>常用URL schemes - Once</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  
+  
+
+    <!-- Site Verification -->
+    <meta name="baidu-site-verification" content="code-J1Qg17G6wT" />
+
+  <link rel="shortcut icon" href="/images/head/icon.jpg" type="image/png" />
+  <meta name="description" content="常用URL schemes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用URL schemes">
+<meta property="og:url" content="http://once00.github.io/2023/11/14/%E5%B8%B8%E7%94%A8URL-schemes/index.html">
+<meta property="og:site_name" content="Once">
+<meta property="og:description" content="常用URL schemes">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T02:39:04.000Z">
+<meta property="article:modified_time" content="2023-11-14T02:52:11.300Z">
+<meta property="article:author" content="Once">
+<meta property="article:tag" content="objective-c">
+<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="https://unpkg.com/highlight.js@9.15.8/styles/atom-one-dark.css" crossorigin>
+  <link rel="stylesheet" href="/lib/mdui_043tiny/css/mdui.css">
+  <link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+  <link rel="stylesheet" href="/lib/fancybox/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css">
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2421060_8z08qcz5sq3.css">
+  
+  <link rel="stylesheet" href="/css/style.css?v=1699930434337">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(/images/background/xiaomai.jpg)"></div>
+    <div class="nexmoe-small" style="background-image: url()"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="Once" class="mdui-btn mdui-btn-icon"><img src="/images/head/icon.jpg" alt="Once"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="Once">
+            <img src="/images/head/icon.jpg" alt="Once" alt="Once">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div class="nexmoe-count-item"><span>Articles</span>25 <div class="item-radius"></div><div class="item-radius item-right"></div> </div>
+        <div class="nexmoe-count-item"><span>Tags</span>10<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+        <div class="nexmoe-count-item"><span>Categories</span>0<div class="item-radius"></div><div class="item-radius item-right"></div></div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-meishi"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/archives.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-hanbao1"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/about.html" title="关于Once">
+            <i class="mdui-list-item-icon nexmoefont icon-jiubei1"></i>
+            <div class="mdui-list-item-content">
+                关于Once
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/friend.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-cola"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+  
+  
+<!-- 站内搜索 -->
+
+<div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search" >
+        <form id="search-form">
+            <label><input type="text" id="local-search-input" name="q" results="0" placeholder="站内搜索" class="input form-control" autocomplete="off" autocorrect="off"/></label>
+            <!-- 清空/重置搜索框 -->
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+        </form>
+    </div>
+    <div id="local-search-result"></div> <!-- 搜索结果区 -->
+    <!-- <p class='no-result'></p> 无匹配时显示，注意在 CSS 中设置默认隐藏 -->
+</div>
+
+
+  
+  <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="http://wpa.qq.com/msgrd?v=3&uin=1096449168&site=qq&menu=yes" target="_blank" mdui-tooltip="{content: 'QQ'}" style="color: rgb(64, 196, 255);background-color: rgba(64, 196, 255, .1);">
+            <i class="nexmoefont icon-QQ"></i>
+        </a><a class="mdui-ripple" href="mailto:love521943@htomail.com" target="_blank" mdui-tooltip="{content: 'mail'}" style="color: rgb(249,8,8);background-color: rgba(249,8,8,.1);">
+            <i class="nexmoefont icon-mail-fill"></i>
+        </a><a class="mdui-ripple" href="https://github.com/once00" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CocoaPods/" style="font-size: 10px;">CocoaPods</a> <a href="/tags/TLBB/" style="font-size: 10px;">TLBB</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/flutter/" style="font-size: 15px;">flutter</a> <a href="/tags/github/" style="font-size: 15px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/objective-c/" style="font-size: 20px;">objective-c</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/thinkphp/" style="font-size: 15px;">thinkphp</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 15px;">数据库</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Archive</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/">2015</a><span class="archive-list-count">10</span></li></ul>
+    </div>
+  </div>
+
+
+<style>
+.nexmoe-widget .archive-list-count{
+	position : absolute;
+	right: 15px;
+	top:9px;
+	color: #DDD;
+}
+</style>
+
+  
+</aside>
+    <!-- <div class="nexmoe-copyright">
+        &copy; 2023 Once
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/tangyuxian/hexo-theme-tangyuxian" target="_blank">Tangyuxian</a><br/>
+        <a href="http://beian.miit.gov.cn" target="_blank"></a><br/>
+        
+        
+    </div> -->
+
+</div><!-- .nexmoe-drawer -->
+
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    
+        <div class="nexmoe-post-cover"
+             style="padding-bottom: 24.305555555555554%;">
+            <img data-src="/images/background/xiaomai.jpg" data-sizes="auto" alt="常用URL schemes" class="lazyload">
+            <h1>常用URL schemes</h1>
+        </div>
+    
+
+        <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2023年11月14日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 9 分钟</a>
+</div>
+
+        <div class="nexmoe-post-right">
+            
+        </div>
+
+        <article>
+            <p>常用URL schemes<br> <span id="more"></span></p>
+<h2 id="支付宝"><a href="#支付宝" class="headerlink" title="支付宝"></a>支付宝</h2><ul>
+<li>手机充值	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?saId&#x3D;10000003</li>
+<li>扫一扫	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?saId&#x3D;10000007</li>
+<li>账单	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000003</li>
+<li>登录界面	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000008</li>
+<li>银行卡	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000014</li>
+<li>余额	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000019</li>
+<li>余额宝	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000032</li>
+<li>付款	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000056</li>
+<li>转账	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?saId&#x3D;20000116</li>
+<li>饿了么	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000120</li>
+<li>收款码	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000123</li>
+<li>自选股	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000134</li>
+<li>会员	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000160</li>
+<li>理财	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000165</li>
+<li>通讯录	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000166</li>
+<li>记账	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000168</li>
+<li>生活缴费	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000193</li>
+<li>花呗	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000199</li>
+<li>黄金	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000218</li>
+<li>总资产	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000243</li>
+<li>我的快递	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000754</li>
+<li>滴滴	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000778</li>
+<li>基金	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000793</li>
+<li>语音助手	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000835</li>
+<li>充值中心	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20000987</li>
+<li>搜索	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;20001003</li>
+<li>蚂蚁森林	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;60000002</li>
+<li>流量钱包	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;60000057</li>
+<li>商家服务	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;60000081</li>
+<li>共享单车	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;60000155</li>
+<li>蚂蚁庄园	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;66666674</li>
+<li>余利宝	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;66666708</li>
+<li>惠支付	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;68687009</li>
+<li>养老	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;68687131</li>
+<li>余额宝	alipay:&#x2F;&#x2F;platformapi&#x2F;startapp?appId&#x3D;77700124</li>
+</ul>
+<h2 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h2><p>打开微信	weixin:&#x2F;&#x2F;<br>扫一扫	weixin:&#x2F;&#x2F;scanqrcode<br>企业微信	wxwork:&#x2F;&#x2F;</p>
+<h2 id="云闪付"><a href="#云闪付" class="headerlink" title="云闪付"></a>云闪付</h2><ul>
+<li>乘车码 upwallet:&#x2F;&#x2F;rn&#x2F;rnhtmlridingcode</li>
+<li>付款码 upwallet:&#x2F;&#x2F;pay</li>
+<li>扫一扫 upwallet:&#x2F;&#x2F;native&#x2F;scanCode</li>
+</ul>
+<h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><ul>
+<li>App Store	itms-apps:&#x2F;&#x2F;</li>
+<li>备忘录	mobilenotes:&#x2F;&#x2F;</li>
+<li>邮件	mailto:&#x2F;&#x2F;</li>
+<li>地图	mas:&#x2F;&#x2F;</li>
+<li>写给指定邮件	mailto:&#x2F;&#x2F;<a href="mailto:&#97;&#100;&#100;&#114;&#x65;&#x73;&#x73;&#x40;&#x31;&#x32;&#x36;&#x2e;&#99;&#x6f;&#109;">&#97;&#100;&#100;&#114;&#x65;&#x73;&#x73;&#x40;&#x31;&#x32;&#x36;&#x2e;&#99;&#x6f;&#109;</a></li>
+<li>给指定号码打电话	tel:&#x2F;&#x2F;12315</li>
+<li>短信	sms:&#x2F;&#x2F;</li>
+<li>给指定号码发短信	sms:&#x2F;&#x2F;15011111111</li>
+<li>日历	calshow:&#x2F;&#x2F;</li>
+<li>相册	photos-redirect:&#x2F;&#x2F;</li>
+<li>音乐	music:&#x2F;&#x2F;</li>
+<li>快捷指令	shortcuts:&#x2F;&#x2F;</li>
+<li>创建捷径	shortcuts:&#x2F;&#x2F;create-shortcut</li>
+<li>打开指定捷径	shortcuts:&#x2F;&#x2F;open-shortcut?name&#x3D;[name]</li>
+<li>钱包	shoebox:&#x2F;&#x2F;</li>
+<li>闹钟	Clock-alarm:&#x2F;&#x2F;</li>
+<li>秒表	Clock-stopwatch:&#x2F;&#x2F;</li>
+<li>倒计时	Clock-timer:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h2><ul>
+<li>百度	BaiduSSO:&#x2F;&#x2F;</li>
+<li>百度地图	baidumap:&#x2F;&#x2F;</li>
+<li>百度音乐	baidumusic:&#x2F;&#x2F;</li>
+<li>百度视频	bdviphapp:&#x2F;&#x2F;</li>
+<li>百度糯米	bainuo:&#x2F;&#x2F;</li>
+<li>百度导航	bdNavi:&#x2F;&#x2F;</li>
+<li>百度贴吧	com.baidu.tieba:&#x2F;&#x2F;</li>
+<li>百度输入法	BaiduIMShop:&#x2F;&#x2F;</li>
+<li>百度云（百度网盘）	baiduyun:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="腾讯"><a href="#腾讯" class="headerlink" title="腾讯"></a>腾讯</h2><ul>
+<li>QQ	mqq:&#x2F;&#x2F;</li>
+<li>QQ	mqq:&#x2F;&#x2F;qrcode&#x2F;scan_qrcode?version&#x3D;1&amp;src_type&#x3D;app</li>
+<li>QQ音乐	qqmusic:&#x2F;&#x2F;</li>
+<li>QQ安全中心	qmtoken:&#x2F;&#x2F;</li>
+<li>腾讯手机管家	mqqsecure:&#x2F;&#x2F;</li>
+<li>QQ浏览器	mttbrowser:&#x2F;&#x2F;</li>
+<li>腾讯企业邮箱	qqbizmailDistribute2:&#x2F;&#x2F;</li>
+<li>腾讯视频	tenvideo:&#x2F;&#x2F;</li>
+<li>腾讯新闻	qqnews:&#x2F;&#x2F;</li>
+<li>腾讯微云	weiyun:&#x2F;&#x2F;</li>
+<li>腾讯地图	sosomap:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="网易"><a href="#网易" class="headerlink" title="网易"></a>网易</h2><ul>
+<li>有道词典	yddictproapp:&#x2F;&#x2F;</li>
+<li>网易公开课	ntesopen:&#x2F;&#x2F;</li>
+<li>网易邮箱	neteasemail:&#x2F;&#x2F;</li>
+<li>网易新闻	newsapp:&#x2F;&#x2F;</li>
+<li>网易云音乐	orpheus:&#x2F;&#x2F;login</li>
+<li>网易云播放已下载歌曲	orpheuswidget:&#x2F;&#x2F;download</li>
+<li>网易云听歌识曲	orpheuswidget:&#x2F;&#x2F;recognize</li>
+</ul>
+<h2 id="银行"><a href="#银行" class="headerlink" title="银行"></a>银行</h2><ul>
+<li>中国银行	BOCMBCIphone:&#x2F;&#x2F;</li>
+<li>工商银行	com.icbc.iphoneclient:&#x2F;&#x2F;</li>
+<li>农业银行	bankabc:&#x2F;&#x2F;</li>
+<li>建设银行	wx2654d9155d70a468:&#x2F;&#x2F;</li>
+<li>邮政银行	psbcmbank:&#x2F;&#x2F;</li>
+<li>交通银行	wx862767be0919d45a:&#x2F;&#x2F;</li>
+<li>招商银行	cmbmobilebank:&#x2F;&#x2F;</li>
+<li>民生银行	com.cmbc.cn.iphone:&#x2F;&#x2F;</li>
+<li>中信银行	citic:&#x2F;&#x2F;</li>
+<li>浦发银行	wx1cb534bb13ba3dbd:&#x2F;&#x2F;</li>
+<li>兴业银行	cibmb:&#x2F;&#x2F;</li>
+<li>招商银行	cmbmobilebank:&#x2F;&#x2F;</li>
+<li>广发银行	wb801126555:&#x2F;&#x2F;</li>
+<li>光大银行	wxf505f9da589b9506:&#x2F;&#x2F;</li>
+<li>华夏银行	com.hx.hxbank:&#x2F;&#x2F;</li>
+<li>渤海银行	wxcc0b1c78c5bebdb5:&#x2F;&#x2F;</li>
+<li>天津银行	wx1683cc7279171014:&#x2F;&#x2F;</li>
+<li>恒丰银行	egbank:&#x2F;&#x2F;</li>
+<li>浙商银行	wx105bde8d0d9f2372:&#x2F;&#x2F;</li>
+<li>平安银行	paebqw:&#x2F;&#x2F;</li>
+<li>江苏银行	jsbsjyh:&#x2F;&#x2F;</li>
+<li>北京银行	wxb57101c34cb7773e:&#x2F;&#x2F;</li>
+<li>上海银行	bankofshanghai:&#x2F;&#x2F;</li>
+<li>河北银行	hebbank:&#x2F;&#x2F;</li>
+<li>青岛银行	wxe63b95c397856088:&#x2F;&#x2F;</li>
+<li>齐鲁银行	wx66b04eb340cefc57:&#x2F;&#x2F;</li>
+<li>日照银行	sccba810:&#x2F;&#x2F;</li>
+<li>莱商银行	sccba803:&#x2F;&#x2F;</li>
+<li>潍坊银行	wx4df61036a188951c:&#x2F;&#x2F;</li>
+<li>济宁银行	wx46071b807d2f473c:&#x2F;&#x2F;</li>
+<li>东营银行	wb4216759672:&#x2F;&#x2F;</li>
+<li>烟台银行	sccba816:&#x2F;&#x2F;</li>
+<li>威海银行	wx14cd9621b76ffa2f:&#x2F;&#x2F;</li>
+<li>枣庄银行	sccba808:&#x2F;&#x2F;</li>
+<li>泰安银行	wb3819898473:&#x2F;&#x2F;</li>
+<li>杭州银行	com.hzbank.hzbank.per:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="社交"><a href="#社交" class="headerlink" title="社交"></a>社交</h2><ul>
+<li>知乎	zhihu:&#x2F;&#x2F;</li>
+<li>新浪微博	sinaweibo:&#x2F;&#x2F;</li>
+<li>微博国际版	weibointernational:&#x2F;&#x2F;</li>
+<li>腾讯微博	TencentWeibo:&#x2F;&#x2F;</li>
+<li>陌陌	momochat:&#x2F;&#x2F;</li>
+<li>百度贴吧	com.baidu.tieba:&#x2F;&#x2F;</li>
+<li>钉钉	dingtalk:&#x2F;&#x2F;</li>
+<li>今日头条	snssdk141:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="购物"><a href="#购物" class="headerlink" title="购物"></a>购物</h2><ul>
+<li>淘宝	taobao:&#x2F;&#x2F;</li>
+<li>淘宝特价版	taobaolite:&#x2F;&#x2F;</li>
+<li>京东	openApp.jdMobile:&#x2F;&#x2F;</li>
+<li>苏宁易购	suning:&#x2F;&#x2F;</li>
+<li>美团	imeituan:&#x2F;&#x2F;</li>
+<li>美团外卖	imeituan:&#x2F;&#x2F;</li>
+<li>1号店	yhd:&#x2F;&#x2F;</li>
+<li>唯品会	vipshop:&#x2F;&#x2F;</li>
+<li>大众点评	dianping:&#x2F;&#x2F;</li>
+<li>天猫	tmall:&#x2F;&#x2F;</li>
+<li>得物	dewuapp:&#x2F;&#x2F;</li>
+<li>拼多多	pinduoduo:&#x2F;&#x2F;</li>
+<li>闲鱼	fleamaeket:&#x2F;&#x2F;</li>
+<li>饿了么	eleme:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="音视频"><a href="#音视频" class="headerlink" title="音视频"></a>音视频</h2><ul>
+<li>抖音	douyin:&#x2F;&#x2F;</li>
+<li>剪映	videocut:&#x2F;&#x2F;</li>
+<li>快手	kwai:&#x2F;&#x2F;</li>
+<li>小红书	wxd8a2750ce9d46980:&#x2F;&#x2F;</li>
+<li>微视	weishiiosscheme:&#x2F;&#x2F;</li>
+<li>微拍	wpweipai:&#x2F;&#x2F;</li>
+<li>虎牙直播	yykiwi:&#x2F;&#x2F;</li>
+<li>斗鱼直播	douyutv:&#x2F;&#x2F;</li>
+<li>优酷	youku:&#x2F;&#x2F;</li>
+<li>腾讯视频	tenvideo:&#x2F;&#x2F;</li>
+<li>爱奇艺	iqiyi:&#x2F;&#x2F;</li>
+<li>百度视频	bdviphapp:&#x2F;&#x2F;</li>
+<li>土豆视频	tudou:&#x2F;&#x2F;</li>
+<li>搜狐视频	sohuvideo:&#x2F;&#x2F;</li>
+<li>哔哩哔哩	bilibili:&#x2F;&#x2F;</li>
+<li>56视频	com.56Video:&#x2F;&#x2F;</li>
+<li>暴风影音	com.baofeng.play:&#x2F;&#x2F;</li>
+<li>芒果TV	wxbbc6e0adf8944632:&#x2F;&#x2F;</li>
+<li>韩剧TV-极速版	hanjulite:&#x2F;&#x2F;</li>
+<li>豆瓣	douban:&#x2F;&#x2F;</li>
+<li>虾米音乐	xiami:&#x2F;&#x2F;</li>
+<li>酷我音乐	com.kuwo.kwmusic.kwmusicForKwsing:&#x2F;&#x2F;</li>
+<li>酷狗音乐	kugouURL:&#x2F;&#x2F;</li>
+<li>天天动听	ttpod:&#x2F;&#x2F;</li>
+<li>QQ音乐	qqmusic:&#x2F;&#x2F;</li>
+<li>网易云音乐	orpheuswidget:&#x2F;&#x2F;</li>
+<li>喜马拉雅	iting:&#x2F;&#x2F;</li>
+<li>全民K歌	qmkege:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="杂类"><a href="#杂类" class="headerlink" title="杂类"></a>杂类</h2><ul>
+<li>交管12123	tmri12123:&#x2F;&#x2F;</li>
+<li>学习强国	dtxuexi:&#x2F;&#x2F;</li>
+<li>中国移动	cn.10086.app:&#x2F;&#x2F;</li>
+<li>Chrome	googlechrome:&#x2F;&#x2F;</li>
+<li>墨迹天气	rm434209233MojiWeather:&#x2F;&#x2F;</li>
+<li>夸克	quark:&#x2F;&#x2F;</li>
+<li>菜鸟裹裹	cainiao:&#x2F;&#x2F;</li>
+<li>迅雷	thunder:&#x2F;&#x2F;</li>
+<li>12306	cn.12306:&#x2F;&#x2F;</li>
+<li>高德地图	iosamap:&#x2F;&#x2F;</li>
+<li>百度地图	baidumap:&#x2F;&#x2F;</li>
+<li>金山词霸	com.kingsoft.powerword.6:&#x2F;&#x2F;</li>
+<li>印象笔记	evernote:&#x2F;&#x2F;</li>
+<li>搜狗输入法	com.sogou.sogouinput:&#x2F;&#x2F;</li>
+<li>WPS Office	KingsoftOfficeApp:&#x2F;&#x2F;</li>
+<li>OfficeSuite	mobisystemsofficesuite:&#x2F;&#x2F;</li>
+<li>PDF Expert 5	pdfexpert5presence:&#x2F;&#x2F;</li>
+<li>艺龙旅行	elongIPhone:&#x2F;&#x2F;</li>
+<li>携程	CtripWireless:&#x2F;&#x2F;</li>
+<li>58同城	wbmain:&#x2F;&#x2F;</li>
+<li>扫描全能王	camscanner:&#x2F;&#x2F;</li>
+<li>Keep	keep:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="相机"><a href="#相机" class="headerlink" title="相机"></a>相机</h2><ul>
+<li>美图秀秀	mtxx:&#x2F;&#x2F;</li>
+<li>轻颜相机	ulike:&#x2F;&#x2F;</li>
+<li>美颜相机	myxj:&#x2F;&#x2F;</li>
+<li>Faceu激萌	faceu:&#x2F;&#x2F;</li>
+<li>B612咔叽	mp1089867628:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><ul>
+<li>和平精英	wxc4c0253df149f02d:&#x2F;&#x2F;</li>
+<li>王者荣耀	wx95a3a4d7c627e07d:&#x2F;&#x2F;</li>
+<li>阴阳师	wb2982475902:&#x2F;&#x2F;</li>
+<li>欢乐斗地主	wx76fc280041c16519:&#x2F;&#x2F;</li>
+<li>天天爱消除	tencent100689805:&#x2F;&#x2F;</li>
+<li>掌阅iReader	iReader:&#x2F;&#x2F;</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>Line	line:&#x2F;&#x2F;</li>
+<li>1Password	onepassword:&#x2F;&#x2F;</li>
+<li>Clear	clearapp:&#x2F;&#x2F;</li>
+<li>Calendars 5	calendars:&#x2F;&#x2F;</li>
+<li>GoodReader 4	com.goodreader.sendtogr:&#x2F;&#x2F;</li>
+<li>Documents 5	rdocs:&#x2F;&#x2F;</li>
+<li>nPlayer	nplayer-http:&#x2F;&#x2F;</li>
+<li>GPlayer	gplayer:&#x2F;&#x2F;</li>
+<li>AVPlayer HD	AVPlayerHD:&#x2F;&#x2F;</li>
+<li>AVPlayer	AVPlayer:&#x2F;&#x2F;</li>
+<li>Ace Player	aceplayer:&#x2F;&#x2F;</li>
+</ul>
+
+        </article>
+
+        
+            
+  <div class="nexmoe-post-copyright">
+    <strong>Author：</strong>Once<br>
+    
+    <strong>Link：</strong><a href="http://once00.github.io/2023/11/14/%E5%B8%B8%E7%94%A8URL-schemes/" title="http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;11&#x2F;14&#x2F;%E5%B8%B8%E7%94%A8URL-schemes&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;once00.github.io&#x2F;2023&#x2F;11&#x2F;14&#x2F;%E5%B8%B8%E7%94%A8URL-schemes&#x2F;</a><br>
+
+    
+      <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+    
+  </div>
+
+
+        
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/objective-c/" rel="tag">objective-c</a>
+    
+</div>
+
+    <div class="nexmoe-post-footer">
+        <section class="nexmoe-comment">
+    <div class="valine"></div>
+<script src="https://unpkg.com/leancloud-storage/dist/av-min.js"></script>
+<script src='https://unpkg.com/valine@1.3.9/dist/Valine.min.js'></script>
+<script>
+    // 使用方法 https://valine.js.org/quickstart.html
+    new Valine({
+        el: '.valine',
+        appId: '9yrYrjyBKgGtz3JbpS7VF41R-gzGzoHsz',
+        appKey: 'XKnWIH4FQjQSX5KDTBgSsOfh'
+    })
+</script>
+</section>
+    </div>
+</div>
+
+
+        <div class="nexmoe-post-right">
+          
+            <div class="nexmoe-fixed">
+              <div class="nexmoe-tool">
+                <a href="#" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+  </div>
+  <div id="nexmoe-pendant">
+    <div class="nexmoe-drawer mdui-drawer nexmoe-pd" id="drawer">
+        
+            <div class="nexmoe-pd-item">
+                <div class="clock">
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="memory"></div>
+        <div class="needle" id="hours"></div>
+        <div class="needle" id="minutes"></div>
+        <div class="needle" id="seconds"></div>
+        <div class="clock_logo">
+
+        </div>
+
+    </div>
+<style>
+    .clock {
+        background-color: #ffffff;
+        width: 70vw;
+        height: 70vw;
+        max-width: 70vh;
+        max-height: 70vh;
+        border: solid 2.8vw #242424;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 1.4vw 2.8vw rgba(0, 0, 0, 0.8);
+        zoom:0.2
+    }
+
+    .memory {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .memory:nth-child(1) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-520%);
+    }
+
+    .memory:nth-child(2) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(6deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(3) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(12deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(4) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(18deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(5) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(24deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(6) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(30deg) translateY(-520%);
+    }
+
+    .memory:nth-child(7) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(36deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(8) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(42deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(9) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(48deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(10) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(54deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(11) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(60deg) translateY(-520%);
+    }
+
+    .memory:nth-child(12) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(66deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(13) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(72deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(14) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(78deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(15) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(84deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(16) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-520%);
+    }
+
+    .memory:nth-child(17) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(96deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(18) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(102deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(19) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(108deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(20) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(114deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(21) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(120deg) translateY(-520%);
+    }
+
+    .memory:nth-child(22) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(126deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(23) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(132deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(24) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(138deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(25) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(144deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(26) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(150deg) translateY(-520%);
+    }
+
+    .memory:nth-child(27) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(156deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(28) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(162deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(29) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(168deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(30) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(174deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(31) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-520%);
+    }
+
+    .memory:nth-child(32) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(186deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(33) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(192deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(34) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(198deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(35) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(204deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(36) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(210deg) translateY(-520%);
+    }
+
+    .memory:nth-child(37) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(216deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(38) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(222deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(39) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(228deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(40) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(234deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(41) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(240deg) translateY(-520%);
+    }
+
+    .memory:nth-child(42) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(246deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(43) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(252deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(44) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(258deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(45) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(264deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(46) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-520%);
+    }
+
+    .memory:nth-child(47) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(276deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(48) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(282deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(49) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(288deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(50) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(294deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(51) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(300deg) translateY(-520%);
+    }
+
+    .memory:nth-child(52) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(306deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(53) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(312deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(54) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(318deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(55) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(324deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(56) {
+        background-color: #424242;
+        width: 2%;
+        height: 8%;
+        transform: translate(-50%, -50%) rotate(330deg) translateY(-520%);
+    }
+
+    .memory:nth-child(57) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(336deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(58) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(342deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(59) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(348deg) translateY(-1461%);
+    }
+
+    .memory:nth-child(60) {
+        background-color: #949494;
+        width: 1%;
+        height: 3%;
+        transform: translate(-50%, -50%) rotate(354deg) translateY(-1461%);
+    }
+
+    .needle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center;
+    }
+
+    .needle#hours {
+        background-color: #1f1f1f;
+        width: 4%;
+        height: 30%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#hours.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#hours:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#minutes {
+        background-color: #1f1f1f;
+        width: 2%;
+        height: 45%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#minutes.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#minutes:after {
+        content: '';
+        background-color: #1f1f1f;
+        width: 4vw;
+        height: 4vw;
+        max-width: 4vh;
+        max-height: 4vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .needle#seconds {
+        background-color: #cb2f2f;
+        width: 1%;
+        height: 50%;
+        transform-origin: center 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    .needle#seconds.moving {
+        transition: transform 150ms ease-out;
+    }
+
+    .needle#seconds:after {
+        content: '';
+        background-color: #cb2f2f;
+        width: 2.5vw;
+        height: 2.5vw;
+        max-width: 2.5vh;
+        max-height: 2.5vh;
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .clock_logo{
+        width: 10vw;
+        height: 10vw;
+        max-width: 10vh;
+        max-height: 10vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    @media (min-width: 100vh) {
+        .clock {
+            border: solid 2.8vh #242424;
+            box-shadow: 0 1.4vh 2.8vh rgba(0, 0, 0, 0.8);
+        }
+    }
+
+</style>
+
+
+
+
+
+            </div>
+        
+            <div class="nexmoe-pd-item">
+                <div class="qweather" >
+    <div id="he-plugin-standard"></div>
+    <div class="qweather-logo">
+
+    </div>
+
+</div>
+<style>
+    .qweather{
+        position: relative;
+    }
+    .qweather-logo{
+        position: absolute;
+        right: 0;
+        top: -15px;
+        width: 40px;
+        height: 40px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+</style>
+<script>
+  WIDGET = {
+    "CONFIG": {
+      "layout": "2",
+      "width": "260",
+      "height": "220",
+      "background": "5",
+      "dataColor": "e67249",
+      "borderRadius": "15",
+      "key": "f74d1e1690e6432d801e97fa2f05a162"
+    }
+  }
+</script>
+<script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
+
+            </div>
+        
+</div>
+<style>
+    .nexmoe-pd {
+        left: auto;
+        top: 40px;
+        right: 0;
+    }
+    .nexmoe-pd-item{
+       display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+</style>
+
+  </div>
+  <script src="https://unpkg.com/lazysizes@5.1.0/lazysizes.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/10.0.0/highlight.min.js"></script>
+<script src="https://unpkg.com/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+
+<script>
+	hljs.initHighlightingOnLoad();
+</script>
+
+<script src="https://unpkg.com/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="/lib/fancybox/js/jquery.fancybox.min.js"></script>
+
+
+<script src="/js/app.js?v=1699930434338"></script>
+
+<script src="https://unpkg.com/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
+</script>
+
+  
+
+
+
+
+
+<!-- hexo injector body_end start -->
+<script src="/js/clock.js"></script>
+
+<script src="https://unpkg.com/clipboard@2.0.8/dist/clipboard.min.js"></script>
+
+<script src="/lib/codeBlock/codeBlockFuction.js"></script>
+
+<script src="/lib/codeBlock/codeLang.js"></script>
+
+<script src="/lib/codeBlock/codeCopy.js"></script>
+
+<script src="/lib/codeBlock/codeShrink.js"></script>
+
+<link rel="stylesheet" href="/lib/codeBlock/matery.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+<script src="/js/search.js"></script>
+
+<script src="/js/webapp.js"></script>
+<!-- hexo injector body_end end --></body>
+</html>
+
